@@ -1,0 +1,33 @@
+@media screen and(max-width: 950px) {
+    .header {
+      &__bottom-burger {
+        width: 25px;
+        height: 15px;
+        position: relative;
+        & span {
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background: $white;
+          top: 7px;
+          border-radius: 2px
+          }
+        &::after,
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background: $white;
+          border-radius: 2px
+          }
+        &::after {
+          bottom: 0;
+        }
+        &::before {
+          top: 0;
+          }
+        }
+    }
+    
+};

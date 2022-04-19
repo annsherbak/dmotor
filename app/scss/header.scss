@@ -1,0 +1,183 @@
+
+.header {
+  color: $white;
+  &__top {
+    background:$accent;
+    padding: 6px 0;
+  }
+  &__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__top-text {
+    max-width: 500px;
+  }
+  &__top-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  &__top-contact {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    color: $white;
+  }
+  &__top-contact:first-child {
+    font-weight: 600;
+  }
+  &__bottom {
+    background: $main;
+    width: 100%;
+    top: 92px;
+    position: fixed;
+    z-index: 999;
+
+  }
+  &__bottom-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__bottom-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__bottom-item {
+    margin-right: 52px;
+    padding: 15px 0;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:focus,
+    &:hover {
+      text-decoration-line: underline;
+    }
+    &:active {
+      opacity: 0.7;
+    }
+  }
+  &__bottom-link {
+     color: inherit;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  &__bottom-form {
+    display: flex;
+    align-items: center;
+  }
+  &__bottom-form--submit {
+    line-height: 0;
+    font-size: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url(../images/svg/header__botton-search.svg);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 16px;
+  }
+  &__bottom-form-text {
+    background-color: transparent;
+    border: none;
+    color: $white;
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 50px;
+  }
+  &__bottom-form-text:focus,
+  &__bottom-form-text:not(:placeholder-shown) {
+    border-bottom: 1px solid $white;
+    max-width: 200px;
+    outline: none;
+  }
+  &__bottom-form-text:focus .header__bottom-btn {
+    display: none;
+  }
+  &__dropmenu {
+    position: absolute;
+    display: none;
+    height: 10%;
+    background: $blue-light;
+    max-width: 620px;
+    padding: 28px 60px;
+    box-shadow: 8px 11px 22px rgba(0, 0, 0, 0.25);
+    transition: all 2s ease-in;
+  }
+  &__dropmenu-active {
+    top:auto;
+    display: block;
+    height: fit-content;
+  }
+  &__dropmenu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 55px;
+    column-gap: 40px;
+  }
+  &__dropmenu-item {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: $white;
+    text-transform: uppercase;
+  } 
+  &__dropmenu-item a {
+    color: inherit;
+    text-decoration: underline;
+  }
+  &__dropmenu-item a:hover {
+    color: $accent;
+  }
+  &__dropmenu-item a:active {
+    opacity: 0.5;
+  }
+  &__dropmenu-list--internal {
+    margin-top: 14px;
+  }
+  &__dropmenu-item--internal {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    text-transform: none;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+  }
+  &__dropmenu-item--internal:last-child {
+    margin: 0;
+  }
+  &__dropmenu-item--internal::after {
+    position: absolute;
+    content: url(../images/svg/header__dropmenu-arrow.svg);
+    width: 15px;
+    height: 15px;
+    left: 0;
+  }
+  &__dropmenu-item--internal a {
+    text-decoration: none !important;
+  }
+  &__dropmenu-item--internal:hover::after,
+  &__dropmenu-item--internal:focus::after {
+    padding-left: 5px;
+    transition: all 0.2s ease;
+  }
+  &__dropmenu-item--internal:active {
+    opacity: 0.5;
+  }
+  &__dropmenu-item--internal a:hover {
+    color: $white;
+  }
+  
+  .header__dropmenu-list {}
+  
+  .header__dropmenu-item {}
+  
+  .header__dropmenu-list--internal {}
+  
+  .header__dropmenu-item--internal {}
+}
