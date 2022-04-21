@@ -1,6 +1,5 @@
 <link rel="stylesheet" href="css/style.min.css">
 </head>
-
 <body>
     <header class="header">
         <div class="header__top">
@@ -8,9 +7,9 @@
                 <div class="header__top-inner">
                     <a href="#!">
                         <picture>
-                            <source srcset="images/header__logo-mobil.png" media="(max-width: 475px)">
-                            <source srcset="images/header__logo-ipad.png" media="(max-width: 800px)">
-                            <img src="images/header__logo-desktop.png" alt="logo">
+                            <source srcset="images/header__logo-mobil.svg" media="(max-width: 475px)">
+                            <source srcset="images/header__logo-tablet.svg" media="(max-width: 800px)">
+                            <img src="images/header__logo-desktop.svg" alt="logo">
                         </picture>
                     </a>
                     <p class="header__top-text">
@@ -33,14 +32,17 @@
                     <nav class="header__bottom-nav">
                         <ul class="header__bottom-list">
                             <li class="header__bottom-item"><a class="header__bottom-link" href="#!">Главная</a></li>
-                            <li class="header__bottom-item dropmenu__trigger"><a class="header__bottom-link" href="#!">Продукция</a></li>
+                            <li class="header__bottom-item dropmenu__trigger"><a class="header__bottom-link" href="#!">Продукция</a>
+                            </li>
                             <li class="header__bottom-item"><a class="header__bottom-link" href="#!">Возможности сервоприводов</a></li>
                             <li class="header__bottom-item"><a class="header__bottom-link" href="#!">Статьи</a></li>
                             <li class="header__bottom-item"><a class="header__bottom-link" href="#!">Контакты</a></li>
                         </ul>
                     </nav>
                     <div class="header__bottom-burger">
-                        <span></span>
+                        <span class="header__bottom-burger--line"></span>
+                        <span class="header__bottom-burger--line"></span>
+                        <span class="header__bottom-burger--word">menu</span>
                     </div>
                     <form class="header__bottom-form">
                         <input class="header__bottom-form--submit" type="submit">
@@ -52,7 +54,7 @@
         </div>
         <div class="container">
             <div class="header__dropmenu">
-                <ul class="header__dropmenu-list">
+                <ul class="header__dropmenu-list ">
                     <li class="header__dropmenu-item"><a href="#!">Комплектные сервоприводы</a>
                         <ul class="header__dropmenu-list--internal">
                             <li class="header__dropmenu-item--internal"><a href="#!">Сервоприводы малой мощности</a></li>
@@ -62,7 +64,7 @@
                             <li class="header__dropmenu-item--internal"><a href="#!">Сервоприводы Panasonic</a></li>
                         </ul>
                     </li>
-
+            
                     <li class="header__dropmenu-item"><a href="#!">Серводвигатели Estun</a>
                         <ul class="header__dropmenu-list--internal">
                             <li class="header__dropmenu-item--internal"><a href="#!">Серводвигатели EM3A</a></li>
@@ -72,7 +74,7 @@
                             <li class="header__dropmenu-item--internal"><a href="#!">Серводвигатели EMB</a></li>
                         </ul>
                     </li>
-
+            
                     <li class="header__dropmenu-item"><a href="#!">Сервоприводы с редуктором</a>
                         <ul class="header__dropmenu-list--internal">
                             <li class="header__dropmenu-item--internal"><a href="#!">Сервопривод EH042</a></li>
@@ -82,16 +84,14 @@
                             <li class="header__dropmenu-item--internal"><a href="#!">Сервопривод EW0180 SE</a></li>
                         </ul>
                     </li>
-
-
                     <li class="header__dropmenu-item"><a href="#!">Сервоусилители Estun</a>
-
                     </li>
+                </ul>
+                <ul class="header__dropmenu-list--mobil">
+                    <li><a href="tel:+78127030981">+7 (812) 703-09-81</a></li>
+                    <li><a href="mailto:mail@dmotor.ru ">mail@dmotor.ru</a></li>
                 </ul>
             </div>
         </div>
 
     </header>
-
-
-</body>

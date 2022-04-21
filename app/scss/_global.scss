@@ -27,9 +27,10 @@ body {
 }
 
 .container{
-  max-width: 1100px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
+	position: relative;
 }
 
 .card {
@@ -75,6 +76,26 @@ body {
 	width: fit-content;
 }
 
+@media screen and(max-width: 1170px) {
+	.container {
+		padding: 0 30px;
+	}
+	.special__title {
+		font-size: 26px;
+		line-height: 130%;
+	}
+}
+
+@media screen and(max-width: 767px) {
+	.container {
+		padding: 0 15px;
+	}
+	.special__title {
+		font-size: 18px;
+		line-height: 130%;
+		display: inline;
+	}
+}
 
 
 

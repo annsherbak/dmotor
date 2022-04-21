@@ -11,6 +11,10 @@ $text: #3B373A;
 
 $grey-light:#ECF0F5;
 
+$tabletWidth: 1770px;
+
+$mobilWidth: 767px;
+
 @mixin main-title {
   font-family: 'Tahoma';
   font-style: normal;

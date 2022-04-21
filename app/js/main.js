@@ -1,21 +1,45 @@
+$(document).ready(function () {
+
+let widthScreen = $(window).width();
+
+
 // header drop - down menu
 
-$(document).ready(function () {
-  $('.header__dropmenu').removeClass('header__dropmenu-active');
+let headerDropMenu = $('.header__dropmenu');
+let dropMenuTrigger = $('.dropmenu__trigger');
+let navMenu = $('.header__bottom-nav');
+let burgerBtn = $('.header__bottom-burger');
+let headerBottom = $(".header__bottom");
+
+if (widthScreen > 1170) {
+  dropMenuTrigger.append(headerDropMenu);
+
+  headerDropMenu.removeClass('header__dropmenu-active');
 
   // hover - эффект при наведении на элемент навигации 'продукция'
-  $('.dropmenu__trigger').hover(function () {
-    $('.header__dropmenu').toggleClass('header__dropmenu-active');
+  $(dropMenuTrigger).hover(function () {
+    headerDropMenu.toggleClass('header__dropmenu-active');
   });
   // hover - эффект при наведении выпадающее меню
-  $(".header__dropmenu").hover(function () {
-    $('.header__dropmenu').toggleClass('header__dropmenu-active');
+  headerDropMenu.hover(function () {
+    headerDropMenu.addClass('header__dropmenu-active');
   });
+}
+  if (widthScreen <= 1170) {
+
+    navMenu.insertBefore($('.header__dropmenu-list')); // перенос навигационного меню из header__bottom в header drop - down menu
+    headerBottom.append(headerDropMenu);
+    burgerBtn.on('click', function(){
+      headerDropMenu.toggleClass('header__dropmenu-active'); // открытие/закрытие бургер меню
+      burgerBtn.toggleClass('active');
+    })
+
+  }
 
 
-  // скролл меню навигации
-
-  let heigthHeader = 92;
+  // скролл-меню навигации
+ 
+  let heigthHeader = $('.header').height();
   let heigthWW = 0;
   
     $(window).scroll(function () {
@@ -24,12 +48,20 @@ $(document).ready(function () {
       var elem = $('.header__bottom');
       
       if (top + heigthWW < heigthHeader) {
-        console.log('fgergrht');
         elem.css('top', (heigthHeader - top));
       } else {
         elem.css('top', heigthWW);
       }
     });
 
+ // кнопка "наверх на мобильной версии"
+
+  $('.footer__buttonUp').click(function () {
+    $('html, body').animate({ scrollTop: 0 });
+    return false;
+  });
+
 });
+  
+ 
 
