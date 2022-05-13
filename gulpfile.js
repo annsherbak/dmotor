@@ -45,7 +45,9 @@ function images() {
 function scripts () {
     return src([
     'app/js/jquery.min.js',
-    'app/js/main.js'
+    'app/js/main.js',
+    'app/js/header.js',
+    'app/js/functions-tabs.js'
     ])
     .pipe(concat('main.min.js'))
     .pipe(uglify()) 

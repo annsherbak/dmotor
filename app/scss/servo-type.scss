@@ -1,0 +1,383 @@
+.servo-type {
+  margin-top: 92px;
+  margin-bottom: 52px;
+
+  &__top {
+    margin-bottom: 62px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+  }
+
+  &__title {
+    @include main-title;
+    font-size: 28px;
+    line-height: 120%;
+    margin-bottom: 16px;
+
+  }
+
+  &__container {
+    max-width: 650px;
+  }
+
+  &__pic img {
+    max-width: none;
+  }
+
+  &__desc p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 8px;
+  }
+
+  &__subtitle {
+    @include main-title;
+    font-size: 21px;
+    line-height: 29px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    position: relative;
+  }
+
+  &__subtitle::after {
+    content: "";
+    position: absolute;
+    width: 41px;
+    height: 5px;
+    background: #d1352f;
+    left: 0;
+    bottom: 0;
+  }
+
+  &__feature {
+    margin-bottom: 40px;
+  }
+
+  &__feature-list {
+    list-style: disc !important;
+    list-style-position: inside !important;
+    padding-left: 10px !important;
+  }
+
+  &__feature-list li {
+    font-size: 16px;
+    line-height: 22px;
+    padding-bottom: 4px;
+  }
+
+  &__models-table {
+    border-collapse: collapse;
+    margin-top: 32px;
+    width: 100%;
+  }
+
+  &__models-table th,
+  &__models-table td {
+    border: 1px solid #7D7D82;
+    min-width: 120px;
+  }
+
+  &__models-table th {
+    width: max-content;
+    min-height: 70px;
+    padding: 9px;
+    font-size: 14px;
+    line-height: 140%;
+    font-weight: 400;
+    background: #E1EEFF;
+  }
+
+  &__models-table--name {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+
+  }
+  &__models-table--container {
+    overflow-x: auto;
+  }
+  &__models-table td {
+    padding: 6px 14px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 140%;
+  }
+
+  &__models-table--flange td {
+    font-size: 14px;
+    line-height: 140%;
+  }
+  &__models-table a {
+    color: inherit !important;
+    text-decoration: underline !important;
+  }
+  &__models-table--link {
+    display: flex;
+    gap: 14px;
+    color: $main;
+    text-decoration: underline;
+    align-items: center;
+    min-width: 170px;
+  }
+
+  &__models-table--link:hover {
+    color: $accent;
+  }
+
+  &__models-table--link:active {
+    opacity: 0.7;
+  }
+
+  &__list {
+    font-size: 16px;
+    line-height: 22px;
+    list-style: disc !important;
+    list-style-position: inside !important;
+  }
+
+  &__comment {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 4px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__card {
+    color: inherit;
+    display: flex;
+    padding: 30px 20px;
+    background: #F6F9FF;
+    ;
+    border-radius: 20px;
+    width: 48%;
+    gap: 15px;
+  }
+
+  &__card:hover {
+    transform: scale(1.03);
+    transition: all 0.3s ease;
+  }
+
+  &__card:active {
+    opacity: 0.7;
+  }
+
+  &__card-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 16px;
+  }
+
+  &__card-container {
+    width: 100%;
+  }
+}
+
+.popular__categories {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 35px;
+
+  &-item {
+    display: block;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: 1.5px solid $main;
+    color: $main;
+  }
+
+  &-item.active {
+    border: 1.5px solid $accent;
+    color: $accent;
+  }
+
+  &-item a {
+    color: inherit;
+  }
+
+  &-item:hover {
+    transform: scale(1.05);
+  }
+
+  &-item:active {
+    opacity: 0.7;
+  }
+}
+
+
+
+
+@media screen and(max-width: 1170px) {
+  .servo-type {
+    &__top {
+      margin-bottom: 50px;
+    }
+
+    &__container {
+      width: 70%;
+    }
+
+    &__title {
+      font-size: 26px;
+      line-height: 127%;
+    }
+
+    &__desc p {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &__subtitle {
+      font-size: 21px;
+      line-height: 29px;
+    }
+
+    &__feature-list li {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &__models-table td,
+    &__models-table th {
+      font-size: 10px;
+      line-height: 140%;
+      padding: 5px;
+      width: auto;
+      min-width: auto;
+    }
+
+    &__models-table--link svg {
+      display: none;
+    }
+
+    &__models--container {
+      overflow-x: scroll;
+    }
+
+    &__models-table--link {
+      width: max-content;
+      min-width: fit-content;
+    }
+
+    &__models-table--name {
+      align-items: flex-start;
+    }
+
+    &__comment,
+    &__list {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &__cards {
+      gap: 15px;
+    }
+
+    &__card {
+      padding: 20px 5px;
+      gap: 0;
+    }
+  }
+
+  .popular__categories {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+
+    & li {
+      width: 45%;
+    }
+
+    &-item {
+      padding: 6px 15px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and(max-width: 767px) {
+  .servo-type {
+    margin-top: 62px;
+    margin-bottom: 82px;
+
+    &__top {
+      flex-direction: column-reverse;
+      margin-bottom: 40px;
+    }
+
+    &__container {
+      width: 100%;
+    }
+
+    &__pic {
+      margin-bottom: 16px;
+    }
+
+    &__title {
+      font-size: 18px;
+      line-height: 123%;
+    }
+
+    &__desc p {
+      font-size: 12px;
+      line-height: 140%;
+    }
+
+    &__subtitle {
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    &__models-table {
+      margin-top: 16px;
+    }
+
+    &__feature {
+      margin-bottom: 32px;
+    }
+
+    &__feature-list li {
+      font-size: 12px;
+      line-height: 140%;
+    }
+
+    &__comment,
+    &__list {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    &__card {
+      width: 100%;
+      padding: 15px 10px;
+      gap: 10px;
+    }
+
+    &__card-title {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+
+  .popular__categories {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+    justify-content: center;
+
+    &-item {
+      padding: 6px 15px;
+      font-size: 11px;
+      line-height: 14px;
+    }
+  }
+}

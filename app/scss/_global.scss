@@ -32,7 +32,14 @@ body {
   padding: 0 15px;
 	position: relative;
 }
-
+	.visually-hidden {
+		opacity: 0;
+		width: 1px;
+		height: 1px;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+	}
 .card {
 	&__feature {
 		width: 100%;
@@ -51,6 +58,7 @@ body {
 		display: table-cell;
 		width: max-content;
 		float: right;
+		text-align: end;
 	}
 
 	&__feature-separator {
@@ -60,6 +68,7 @@ body {
 		background-repeat: repeat-x;
 		display: table-cell;
 		width: inherit;
+		min-width: 20px;
 	}
 }
 

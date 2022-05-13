@@ -1,0 +1,434 @@
+.product-card {
+  margin-top: 92px;
+  margin-bottom: 52px;
+  position: relative;
+  &__top {
+    display: flex;
+    margin-bottom: 56px;
+    align-items: center;
+  }
+  &__container {
+    max-width: 540px;
+    margin-right: 170px;
+  }
+  &__title {
+    @include main-title;
+    font-size: 30px;
+    line-height: 123%;
+    position: relative;
+    margin-bottom: 16px;
+  }
+  &__text p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  &__desc-item {
+    margin-bottom: 56px;
+  }
+  &__desc-features {
+    max-width: 540px;
+  }
+  &__desc-feature {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  &__desc-feature .card__feature-left {
+    color: #7D7D82;
+  }
+  &__desc-title {
+    font-size: 21px;
+    line-height: 29px;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  &__desc-title::after {
+    content: "";
+    position: absolute;
+    width: 41px;
+    height: 5px;
+    background: $accent;
+    left: 0;
+    bottom: 0;
+  }
+  &__desc-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  &__desc-buttons a {
+    font-size: 16px;
+    line-height: 22px;
+    color: $white;
+    padding: 12px 20px;
+    background: $blue-light;
+    border-radius: 4px;
+
+  }
+  &__desc-buttons a:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+  &__desc-buttons a:active {
+    opacity: 0.7;
+  }
+  &__desc-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  &__desc-card {
+    width: 48%;
+    background: #F6F9FF;
+    border-radius: 20px;
+    padding: 20px;
+  }
+  &__desc-card--title {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 4px;
+  }
+  &__desc-card--comment {
+    font-size: 14px;
+    line-height: 18px;
+    color: #7D7D82;
+    margin-bottom: 16px;
+  }
+  &__desc-pic {
+    position: relative;
+    width: fit-content;
+  }
+  &__desc-pic--comment {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 12px;
+    line-height: 14px;
+
+  }
+  &__desc-pic--low {
+    right: 10px;
+    bottom: -25px;
+  }
+  &__desc-pic--comment ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style-position: inside !important;
+    justify-content: space-between;
+  }
+  &__desc-pic--comment li {
+    padding-right: 10px;
+  }
+  &__form {
+    position: sticky;
+    margin-left: auto;
+    margin-right: 0;
+    width: 330px;
+    bottom: 0px;
+    right: 0;
+    
+  }
+  &__form-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 8px;
+
+  }
+  &__form-container {
+    position: absolute;
+    background: #F6F9FF;
+    padding: 32px;
+    padding-bottom: 42px;
+    bottom: 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    
+  }
+  &__form-desc {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 16px;
+  }
+  &__form-email {
+    background: #FFFFFF;
+    border-radius: 5px;
+    border: 1px solid $main;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+  &__form-button {
+    display: block;
+    background: $blue-light;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 19px;
+    color: $white;
+    padding : 10px;
+  }
+  &__form-done {
+    margin-top: 8px;
+    color: #7d7d82;
+    position: relative;
+    padding-left: 40px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  &__form-done::after {
+    content: url(../images/svg/index__about-person.svg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    
+
+  }
+  &__desc-elements {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 730px;
+    gap: 30px;
+
+  }
+  &__desc-element {
+    height: auto;
+    width: 48%;
+    padding: 20px;
+    border: 1px solid #7D7D82;
+    border-radius: 20px;
+  }
+  &__desc-element--title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+  &__desc-element--text {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 4px;
+  }
+  &__desc-element--list {
+    list-style:disc !important;
+    padding-left: 15px !important;
+    margin: 10px 0;
+    
+  }
+  &__desc-element--comment {
+    text-decoration: underline;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  &__desc-element--list li {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .product-card__desc-element {}
+  
+  .product-card__desc-card--title {}
+  
+  .product-card__desc-card--list {}
+  
+  .product-card__desc-card--text {}
+}
+@media screen and(max-width: 1170px) {
+    .product-card {
+      &__top {
+        align-items: center;
+        margin-bottom: 46px;
+      }
+      &__container {
+        max-width: none;
+        width: 65%;
+        margin: 0;
+        margin-right: 30px;
+      }
+      &__title {
+        font-size: 26px;
+        line-height: 127%;
+      }
+      &__text p {
+        font-size: 14px;
+        line-height: 19px;
+      }
+      &__desc-title {
+        font-size: 21px;
+        line-height: 29px;
+      }
+      &__desc-container {
+        gap: 36px;
+        display: flex;
+      }
+      &__desc-item--flex {
+        width: 48%;
+      }
+      &__desc-buttons {
+        flex-direction: column;
+        width: max-content;
+      }
+      &__desc-buttons a {
+        font-size: 14px;
+        line-height: 19px;
+        padding: 12px 30px;
+      }
+      &__desc-item {
+        margin-bottom: 36px;
+      }
+      &__desc-feature {
+        font-size: 14px;
+        line-height: 19px;
+      }
+      &__desc-cards {
+        gap: 15px;
+      }
+      &__desc-card {
+        padding: 20px;
+      }
+      &__desc-card--title {
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 4px;
+      }
+      &__form {
+        position: static;
+      }
+      &__form-container {
+        margin: 0;
+        margin-right: 30px;
+        padding: 16px;
+      }
+      &__desc-elements {
+        max-height: none;
+        
+      }
+      &__desc-element {
+        width: 100%;
+      }
+      &__desc-element--comment,
+      &__desc-element--text
+       {
+        font-size: 14px;
+        line-height: 19px;
+      }
+      &__desc-element--list li {
+        font-size: 14px;
+        line-height: 19px;
+      }
+      &__desc-element--title {
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 12px;
+      }
+      &__desc-element--flexbox {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+    }
+}
+@media screen and(max-width: 767px) {
+  .product-card {
+    margin-top: 62px;
+    margin-bottom: 82px;
+    &__top {
+      flex-direction: column-reverse;
+      margin-bottom: 42px;
+    }
+    &__desc-item {
+      margin-bottom: 32px;
+    }
+    &__container {
+      width: 100%;
+      margin: 0;
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 123%;
+    }
+    &__text {
+      font-size: 12px;
+      line-height: 140%;
+    }
+    &__pic {
+      margin-bottom: 16px;
+    }
+    &__desc-title {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &__desc-container {
+      gap: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    &__desc-item--flex {
+      width: 100%;
+    }
+    
+    &__desc-buttons {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+    
+    &__desc-buttons a {
+      font-size: 14px;
+      line-height: 19px;
+      padding: 12px 30px;
+    }
+    &__desc-feature {
+      font-size: 12px;
+      line-height: 140%;
+    }
+    &__desc-cards {
+      flex-direction: column;
+    }
+    &__desc-card {
+      width: 100%;
+    }
+    &__desc-card--title {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 8px;
+    }
+    &__desc-pic--comment {
+      bottom: -30px;
+      font-size: 11px;
+    }
+    &__form {
+      display: block;
+      position: static;
+      width: 100%;
+    }
+    &__form-container {
+      position: static;
+      padding: 16px;
+      margin: 0;
+    }
+  
+    &__form-desc {
+      font-size: 12px;
+      line-height: 130%;
+    }
+    &__desc-card--comment {
+      font-size: 11px;
+      line-height: 140%;
+    }
+    &__desc-elements {
+      gap:16px;
+    }
+    &__desc-element--list li,
+    &__desc-element--text,
+    &__desc-element--comment{
+      font-size: 12px;
+      line-height: 140%;
+    }
+  }
+  
+}

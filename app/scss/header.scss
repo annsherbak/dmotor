@@ -46,8 +46,8 @@
     flex-wrap: wrap;
   }
   &__bottom-item {
-    margin-right: 52px;
-    padding: 15px 0;
+    margin-right: 42px;
+    padding: 15px 10px;
     position: relative;
     &:last-child {
       margin-right: 0;
@@ -60,15 +60,18 @@
       opacity: 0.7;
     }
   }
+    &__bottom-item.active {
+      background: $blue-light;
+    }
     &__bottom-item.dropmenu__trigger {
-      padding-right: 10px;
+      padding-right: 25px;
     }
     &__bottom-item.dropmenu__trigger::after {
       position: absolute;
       content: url(../images/svg/header__dropmenu-arrow.svg);
       width: 15px;
       height: 15px;
-      right: -10px;
+      right: 5px;
       top: 45%;
       transform: translateY(-50%);
       transform:rotate(90deg);
