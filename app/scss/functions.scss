@@ -292,6 +292,11 @@
     align-items: center;
 
   }
+  &__item-title {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 24px;
+  }
   &__desc {
     flex:1 0 45%;
     margin-right: 24px;
@@ -330,6 +335,7 @@
     display: flex;
     gap: 30px;
     margin-top: 15px;
+    flex-wrap: wrap;
   }
   
   &__card {
@@ -337,6 +343,9 @@
     padding: 30px 35px;
     border-radius: 20px;
     border: 1px solid #d8dbe2;
+  }
+  &__card-alone {
+    width: fit-content;
   }
   &__card-title {
     font-size: 16px;
@@ -382,6 +391,10 @@
     color: #7d7d82;
     margin: 0 auto;
     text-align: center;
+  }
+  &__flexbox {
+    display: flex;
+    gap: 15px;
   }
 }
 
@@ -439,12 +452,17 @@
     &__item-list {
       margin: 16px 0;
     }
+    &__item-title {
+      font-size: 16px;
+      line-height: 22px;
+    }
     &__cards {
       gap: 16px;
     }
     &__card {
       padding: 20px;
     }
+    
     &__card-title {
       font-size: 16px;
       line-height: 24px;
@@ -622,7 +640,9 @@
       font-size: 22px;
       line-height: 26px;
     }
-  
+    &__item {
+      margin-bottom: 20px;
+    }
     &__item-list {
       margin-top: 16px;
     }
@@ -646,6 +666,10 @@
     &__item-pics figcaption {
       font-size: 12px;
       line-height: 14px;
+    }
+    &__item-title {
+      font-size: 14px;
+      line-height: 20px;
     }
     &__cards {
       flex-direction: column;

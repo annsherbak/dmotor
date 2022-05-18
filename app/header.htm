@@ -1,4 +1,13 @@
 <link rel="stylesheet" href="css/style.min.css">
+
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon//favicon-16x16.png">
+<link rel="manifest" href="favicon//site.webmanifest">
+<link rel="mask-icon" href="favicon//safari-pinned-tab.svg" color="#d1352f">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
 </head>
 <body>
     <header class="header">
@@ -45,8 +54,27 @@
                         <span class="header__bottom-burger--word">menu</span>
                     </div>
                     <form class="header__bottom-form">
-                        <input class="header__bottom-form--submit" type="submit">
-                        <input class="header__bottom-form-text" type="text" placeholder="Поиск">
+                        <span class="header__bottom-form--close"></span>
+                        <div class="ya-site-form ya-site-form_inited_no" data-bem="{&quot;action&quot;:&quot;http://localhost:3000/search.htm&quot;,&quot;arrow&quot;:false,&quot;bg&quot;:&quot;transparent&quot;,&quot;fontsize&quot;:14,&quot;fg&quot;:&quot;#FFFFFF&quot;,&quot;language&quot;:&quot;ru&quot;,&quot;logo&quot;:&quot;rb&quot;,&quot;publicname&quot;:&quot;Поиск по сайту dmotor.ru&quot;,&quot;suggest&quot;:true,&quot;target&quot;:&quot;_self&quot;,&quot;tld&quot;:&quot;ru&quot;,&quot;type&quot;:3,&quot;usebigdictionary&quot;:true,&quot;searchid&quot;:2618503,&quot;input_fg&quot;:&quot;#FFFFFF&quot;,&quot;input_bg&quot;:&quot;#ffffff&quot;,&quot;input_fontStyle&quot;:&quot;normal&quot;,&quot;input_fontWeight&quot;:&quot;normal&quot;,&quot;input_placeholder&quot;:&quot;&quot;,&quot;input_placeholderColor&quot;:&quot;#FFFFFF&quot;,&quot;input_borderColor&quot;:&quot;#7f9db9&quot;}">
+                            <form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8">
+                                <input type="hidden" name="searchid" value="2618503" />
+                                <input type="hidden" name="l10n" value="ru" />
+                                <input type="hidden" name="reqenc" value="" />
+                                
+                                <input class="header__bottom-form--submit" type="submit" value="Найти" placeholder="Поиск"/>
+                                <input class="header__bottom-form-text" type="search" name="text" value="" /></form>
+                                
+                        </div>
+                        <style type="text/css">
+                            .ya-page_js_yes .ya-site-form_inited_no {
+                                display: none;
+                            }
+                        </style>
+                        <script type="text/javascript">(function (w, d, c) { var s = d.createElement('script'), h = d.getElementsByTagName('script')[0], e = d.documentElement; if ((' ' + e.className + ' ').indexOf(' ya-page_js_yes ') === -1) { e.className += ' ya-page_js_yes'; } s.type = 'text/javascript'; s.async = true; s.charset = 'utf-8'; s.src = (d.location.protocol === 'https:' ? 'https:' : 'http:') + '//site.yandex.net/v2.0/js/all.js'; h.parentNode.insertBefore(s, h); (w[c] || (w[c] = [])).push(function () { Ya.Site.Form.init() }) })(window, document, 'yandex_site_callbacks');</script>
+                        <!-- <input class="header__bottom-form--submit" type="submit">
+                        <input class="header__bottom-form-text" type="text" placeholder="Поиск"> -->
+
+                      <button class="header__bottom-form--open"></button>  
                     </form>
 
                 </div>
@@ -55,36 +83,37 @@
         <div class="container">
             <div class="header__dropmenu">
                 <ul class="header__dropmenu-list ">
-                    <li class="header__dropmenu-item"><a href="#!">Комплектные сервоприводы</a>
+                    <li class="header__dropmenu-item"><a href="/servodrive.htm">Комплектные сервоприводы</a>
                         <ul class="header__dropmenu-list--internal">
-                            <li class="header__dropmenu-item--internal"><a href="#!">Сервоприводы малой мощности</a></li>
-                            <li class="header__dropmenu-item--internal"><a href="#!">Высокомоментные сервоприводы</a></li>
-                            <li class="header__dropmenu-item--internal"><a href="#!">Стандартные сервоприводы</a></li>
-                            <li class="header__dropmenu-item--internal"><a href="#!">Мощные сервоприводы</a></li>
-                            <li class="header__dropmenu-item--internal"><a href="#!">Сервоприводы Panasonic</a></li>
+                            <li class="header__dropmenu-item--internal"><a href="/low-inertia-servo.htm">Низкоинерционные сервоприводы</a></li>
+                            <li class="header__dropmenu-item--internal"><a href="/high-torque-servo.htm">Высокомоментные сервоприводы</a></li>
+                            <li class="header__dropmenu-item--internal"><a href="/standard-servo.htm">Стандартные сервоприводы</a></li>
+                            <li class="header__dropmenu-item--internal"><a href="/high-power-servo.htm">Мощные сервоприводы</a></li>
                         </ul>
                     </li>
             
-                    <li class="header__dropmenu-item"><a href="#!">Серводвигатели Estun</a>
+                    <li class="header__dropmenu-item"><a href="/estun-servomotor.htm">Серводвигатели Estun</a>
                         <ul class="header__dropmenu-list--internal">
-                            <li class="header__dropmenu-item--internal"><a href="#!">Серводвигатели EM3A</a></li>
-                            <li class="header__dropmenu-item--internal"><a href="#!">Серводвигатели EMJ</a></li>
-                            <li class="header__dropmenu-item--internal"><a href="#!">Серводвигатели EMG</a></li>
-                            <li class="header__dropmenu-item--internal"><a href="#!">Серводвигатели EML</a></li>
-                            <li class="header__dropmenu-item--internal"><a href="#!">Серводвигатели EMB</a></li>
+                            <li class="header__dropmenu-item--internal"><a href="/em3a.htm">Серводвигатели EM3A</a></li>
+                            <li class="header__dropmenu-item--internal"><a href="/emj.htm">Серводвигатели EMJ</a></li>
+                            <li class="header__dropmenu-item--internal"><a href="/emg.htm">Серводвигатели EMG</a></li>
+                            <li class="header__dropmenu-item--internal"><a href="/eml.htm">Серводвигатели EML</a></li>
+                            <li class="header__dropmenu-item--internal"><a href="/emb.htm">Серводвигатели EMB</a></li>
                         </ul>
                     </li>
             
-                    <li class="header__dropmenu-item"><a href="#!">Сервоприводы с редуктором</a>
+                    <li class="header__dropmenu-item"><a href="/reductor.htm">Редукторы для сервоприводов</a>
                         <ul class="header__dropmenu-list--internal">
-                            <li class="header__dropmenu-item--internal"><a href="#!">Сервопривод EH042</a></li>
-                            <li class="header__dropmenu-item--internal"><a href="#!">Сервопривод EW060 SE</a></li>
-                            <li class="header__dropmenu-item--internal"><a href="#!">Сервопривод EW080 SE</a></li>
-                            <li class="header__dropmenu-item--internal"><a href="#!">Сервопривод EW0120 SE</a></li>
-                            <li class="header__dropmenu-item--internal"><a href="#!">Сервопривод EW0180 SE</a></li>
+                            <li class="header__dropmenu-item--internal"><a href="/el-ew-60.htm">Сервопривод EW060 SE</a></li>
+                            <li class="header__dropmenu-item--internal"><a href="/el-ew-90.htm">Сервопривод EW090 SE</a></li>
+                            <li class="header__dropmenu-item--internal"><a href="/el-ew-120.htm">Сервопривод EW0120 SE</a></li>
                         </ul>
                     </li>
-                    <li class="header__dropmenu-item"><a href="#!">Сервоусилители Estun</a>
+                    <li class="header__dropmenu-item"><a href="/estun-servoamplifier.htm">Сервоусилители Estun</a>
+                        <ul class="header__dropmenu-list--internal">
+                            <li class="header__dropmenu-item--internal"><a href="/edc.htm">Блок управления EDC</a></li>
+                            <li class="header__dropmenu-item--internal"><a href="/pronet.htm">Блок управления Pronet</a></li>
+                        </ul>
                     </li>
                 </ul>
                 <ul class="header__dropmenu-list--mobil">

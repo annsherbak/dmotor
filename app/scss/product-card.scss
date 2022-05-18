@@ -119,6 +119,29 @@
   &__desc-pic--comment li {
     padding-right: 10px;
   }
+  &__desc-reductor {
+    padding-bottom: 300px;
+  }
+  &__table-container {
+    overflow-x: auto;
+  }
+  &__table {
+    border-collapse: collapse;
+    width: max-content;
+    text-align: left;
+  }
+  &__table td,th {
+    padding: 12px 10px;
+    border: 1px solid #828282;
+    min-width: 100px;
+    max-width: 500px;
+  }
+  &__table td:nth-child(2n) {
+    background: #F6F9FF;
+  }
+  &__table-ratios th:nth-child(2n-1) {
+    background: #F6F9FF;
+  }
   &__form {
     position: sticky;
     margin-left: auto;
@@ -228,13 +251,12 @@
     font-size: 16px;
     line-height: 22px;
   }
-  .product-card__desc-element {}
-  
-  .product-card__desc-card--title {}
-  
-  .product-card__desc-card--list {}
-  
-  .product-card__desc-card--text {}
+  &__desc-pic--list li {
+    color: #7D7D82;
+    margin-bottom: 4px;
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 @media screen and(max-width: 1170px) {
     .product-card {
@@ -248,6 +270,7 @@
         margin: 0;
         margin-right: 30px;
       }
+
       &__title {
         font-size: 26px;
         line-height: 127%;
@@ -259,6 +282,9 @@
       &__desc-title {
         font-size: 21px;
         line-height: 29px;
+      }
+      &__desc-reductor {
+        padding-bottom: 200px;
       }
       &__desc-container {
         gap: 36px;
@@ -294,6 +320,16 @@
         line-height: 19px;
         margin-bottom: 4px;
       }
+      &__table {
+        width: 100%;
+      }
+      &__table td,th {
+        font-size: 12px;
+        line-height: 140%;
+        padding: 8px;
+        max-width: 400px;
+
+      }
       &__form {
         position: static;
       }
@@ -328,6 +364,10 @@
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
+      }
+      &__desc-pic--list li {
+        font-size: 14px;
+        line-height: 19px;
       }
     }
 }
@@ -366,7 +406,9 @@
       display: flex;
       flex-direction: column;
     }
-    
+    &__desc-reductor {
+      padding-bottom: 0;
+    }
     &__desc-item--flex {
       width: 100%;
     }
@@ -381,6 +423,7 @@
       font-size: 14px;
       line-height: 19px;
       padding: 12px 30px;
+      width: fit-content;
     }
     &__desc-feature {
       font-size: 12px;
@@ -429,6 +472,11 @@
       font-size: 12px;
       line-height: 140%;
     }
+    &__desc-pic--list {
+      font-size: 12px;
+      line-height: 140%;
+    }
+    
   }
   
 }

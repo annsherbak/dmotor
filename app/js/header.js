@@ -71,5 +71,18 @@ $(document).ready(function () {
       break;
 
   }
+  //открытие поиска на мобильной версии 
+
+  let buttonOpenSearch = $('.header__bottom-form--open');
+  let buttonCloseSearch = $('.header__bottom-form--close');
+  let search = $('.header__bottom-form');
+
+  buttonOpenSearch.on('click', function () {
+    search.css("display", "block");
+  })
+  buttonCloseSearch.on('click', function (){
+    console.log('gfrgdg');
+    search.css("display", "none");
+  })
 
 });

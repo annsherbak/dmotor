@@ -84,7 +84,7 @@
     padding: 9px;
     font-size: 14px;
     line-height: 140%;
-    font-weight: 400;
+    font-weight: 600;
     background: #E1EEFF;
   }
 
@@ -146,6 +146,7 @@
 
   &__cards {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     gap: 30px;
   }
@@ -169,7 +170,9 @@
   &__card:active {
     opacity: 0.7;
   }
-
+  &__card &__pic  {
+    margin: 0;
+  }
   &__card-title {
     font-weight: 700;
     font-size: 18px;
@@ -372,7 +375,6 @@
     flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 25px;
-    justify-content: center;
 
     &-item {
       padding: 6px 15px;
