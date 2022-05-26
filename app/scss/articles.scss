@@ -26,7 +26,7 @@
   &__text {
     font-size: 14px;
     line-height: 19px;
-    color: #7D7D82;
+    color: $grey;
     margin-bottom: 42px;
   }
   &__cards {
@@ -165,7 +165,7 @@
   &__item-pic figcaption {
     font-size: 14px;
     line-height: 19px;
-    color: #7D7D82;
+    color: $grey;
     margin: 0 auto;
     text-align: center;
   }
@@ -212,7 +212,7 @@
 
   }
   &__item-table--color {
-    background: #F6F9FF;
+    background: $blue-light;
   }
 }
 @media screen and(max-width: 1170px) {

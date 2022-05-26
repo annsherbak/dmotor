@@ -133,6 +133,10 @@
     line-height: 22px;
     margin-bottom: 6px;
   }
+  &__mode-sublist a {
+    color: inherit;
+    text-decoration: underline;
+  }
   &__mode-sublist li:last-child {
     margin: 0;
   }
@@ -144,6 +148,7 @@
     position: relative;
     padding-right: 24px;
     color: $main;
+    text-decoration: underline;
   }
   &__mode-link::after {
     content: url(../images/svg/info__arrow.svg);
@@ -388,7 +393,7 @@
     gap: 50px;
   }
   &__pics figcaption {
-    color: #7d7d82;
+    color: $grey;
     margin: 0 auto;
     text-align: center;
   }

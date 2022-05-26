@@ -1,5 +1,5 @@
 .search {
-  margin-top: 80px;
+  margin-top: 80px !important;
 }
 
 .header {
@@ -9,19 +9,19 @@
 
   &__bottom-form {
     max-width: 260px;
-    background: $blue-light;
-    border-radius: 10px;
+    background: $main-light !important;
+    border-radius: 10px !important;
     
   }
 }
 
   #ya-site-form0 .ya-site-form__form:focus,
   #ya-site-form0 .ya-site-form__form:not(:placeholder-shown) {
-    max-width: 400px;
+    max-width: 400px !important;
   }
 
   #ya-site-form0 .ya-site-form__search-input {
-    padding: 4px 20px;
+    padding: 2px 20px !important;
   }
 
   .ya-site-form__search-input {}
@@ -32,14 +32,14 @@
   }
 
   #ya-site-form0 .ya-site-form__submit_type_image {
-    background: url(../images/svg/header__botton-search.svg);
-    width: 30px;
-    height: 30px;
+    background: url(../images/svg/header__botton-search.svg) !important;
+    width: 30px !important;
+    height: 30px !important;
   }
 
   #ya-site-results {
-    color: #000000;
-    background: #FFFFFF;
+    color: #000000 !important;
+    background: #FFFFFF !important;
   }
 #ya-site-results .b-head_type_search-simple {
   display: none;
@@ -241,61 +241,62 @@
   }
   @media screen and(max-width: 767px) {
     .search {
-      margin-top: 50px;
-      margin-bottom: 80px;
+      margin-top: 50px !important;
+      margin-bottom: 80px !important;
     }
 
     .header__bottom-form {
-      max-width: none;
+      max-width: none !important;
       display: none;
-      background: $main;
-      border-radius: 10px;
-      margin-right: 10px;
-      position: absolute;
-      top: 0px;
-      width: 100%;
-      left: 0;
-      right: 0;
+      background: $main !important;
+      border-radius: 10px !important;
+      margin-right: 10px !important;
+      position: absolute !important;
+      top: 0px !important;
+      width: 100% !important;
+      left: 0 !important; 
+      right: 0 !important;
+      bottom: 0 !important;
 
     }
 
     .header__bottom-form--open {
-      display: block;
-      width: 30px;
-      height: 30px;
-      background: #000;
-      background: url(../images/svg/header__botton-search.svg);
-      border: none;
-      order: -1;
-      margin-right: 15px;
+      display: block !important;
+      width: 30px !important;
+      height: 30px !important;
+      background: #000 !important;
+      background: url(../images/svg/header__botton-search.svg) !important;
+      border: none !important;
+      order: -1 !important;
+      margin-right: 15px !important;
     }
 
     .header__bottom-form--close {
-      position: absolute;
-      display: block;
-      width: 18px;
-      height: 18px;
-      background: #000;
-      background: url(../images/svg/close__search.svg);
-      background-repeat: no-repeat;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      margin-left: 10px;
+      position: absolute !important;
+      display: block; 
+      width: 18px !important;
+      height: 18px !important;
+      background: #000 !important;
+      background: url(../images/svg/close__search.svg) !important;
+      background-repeat: no-repeat !important;
+      top: 0 !important;
+      bottom: 0 !important;
+      margin: auto !important;
+      margin-left: 10px !important;
     }
   
     #ya-site-form0 .ya-site-form__search-input {
-      padding: 6px;
+      padding: 6px !important;
     }
 
     #ya-site-form0 .ya-site-form__input {
-      text-align: end;
+      text-align: end !important;
     }
 
     #ya-site-form0 .ya-site-form__form .ya-site-form__input-text {
-      width: 85%;
-      margin-right: 0;
-      margin-left: auto;
+      width: 85% !important;
+      margin-right: 0 !important;
+      margin-left: auto !important;
       text-align: left !important;
     }
 
@@ -305,9 +306,9 @@
     }
 
     #ya-site-form0 .ya-site-form__submit_type_image {
-      background: url(../images/svg/header__botton-search.svg);
-      width: 30px;
-      height: 30px;
+      background: url(../images/svg/header__botton-search.svg) !important;
+      width: 30px !important;
+      height: 30px !important;
     }
     #ya-site-results .g-gap-horizontal {
       margin: 0;

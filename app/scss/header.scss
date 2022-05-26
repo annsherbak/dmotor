@@ -61,7 +61,7 @@
     }
   }
     &__bottom-item.active {
-      background: $blue-light;
+      background: $main-light;
     }
     &__bottom-item.dropmenu__trigger {
       padding-right: 25px;
@@ -89,7 +89,7 @@
     z-index: 9999;
     position: absolute;
     display: none;
-    background: $blue-light;
+    background: $main-light;
     width: 620px;
     padding: 28px 60px;
     box-shadow: 8px 11px 22px rgba(0, 0, 0, 0.25);
@@ -276,7 +276,7 @@
     &__dropmenu-active {
       left: auto;
       right: 0;
-      top: 45px;
+      top: 50px;
       transition: all 0.7s ease;
     }
     &__dropmenu-list {

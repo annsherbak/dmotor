@@ -94,7 +94,7 @@
     line-height: 22px;
   }
   &__card-feature .card__feature-left {
-    color: #7D7D82;
+    color: $grey;
   }
   &__card-feature .card__feature-separator {
     min-width: 26px;
@@ -118,7 +118,7 @@
     left: 0;
   }
   &__card-list span {
-    color: #7D7D82;
+    color: $grey;
   }
 }
 .supply {
@@ -161,7 +161,7 @@
     line-height: 19px;
   }
   &__card-feature .card__feature-left  {
-    color: #7D7D82;
+    color: $grey;
   }
   &__card-btn {
     display: block;
@@ -171,7 +171,7 @@
     border-radius: 4px;
     padding: 12px 55px;
     width: fit-content;
-    color:$blue-light;
+    color:$main-light;
     margin-top: auto;
     align-self: center;
     font-size: 16px;

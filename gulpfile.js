@@ -30,7 +30,7 @@ function images() {
     [
         imagemin.gifsicle({interlaced: true}),
         imagemin.mozjpeg({quality: 75, progressive: true}),
-        imagemin.optipng({optimizationLevel: 5}),
+        imagemin.optipng({optimizationLevel: 6}),
         imagemin.svgo({
             plugins: [
                 {removeViewBox: true},
@@ -71,7 +71,12 @@ function build() {
         'app/css/style.min.css',
         'app/fonts/**/*',
         'app/js/main.min.js',
-        'app/*.html'
+        'app/pdf/*',
+        'app/favicon/*',
+        'app/*.htm',
+        'app/components/*.htm',
+        'app/php/*.php',
+        'app/*.php'
     ], {base: 'app'})
     .pipe(dest('dist'))
     

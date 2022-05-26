@@ -30,7 +30,6 @@ $(document).ready(function () {
       headerDropMenu.toggleClass('header__dropmenu-active'); // открытие/закрытие бургер меню
       burgerBtn.toggleClass('active');
     })
-
   }
 
 

@@ -5,15 +5,16 @@ $accent: #D1352F;
 
 $main: #102542;
 
-$blue-light:#21395A;
+$main-light:#21395A;
 
 $text: #3B373A;
 
+$blue-light:#F6F9FF;
+
 $grey-light:#ECF0F5;
 
-$tabletWidth: 1770px;
+$grey: #7d7d82;
 
-$mobilWidth: 767px;
 
 @mixin main-title {
   font-family: 'Tahoma';
