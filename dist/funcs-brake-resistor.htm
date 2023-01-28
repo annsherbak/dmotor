@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Использование тормозного резистора.</title>
+  <meta name="description" content="Сервопривод позволяет использование внутреннего и внешнего тормозного резистора.">
+
+    <?php include "header.htm"; ?>
+    <main class="main" id="category__capability">
+      <section class="breadcrumbs">
+        <div class="container">
+          <? include "php/breadcrumbs.php"; ?>
+        </div>
+      </section>
+      <section class="control-methods">
+        <div class="control-methods__container">
+          <h1 class="control-methods__title">
+            Использование тормозного резистора
+          </h1>
+          <p class="control-methods__text">
+            Сервопривод позволяет использование внутреннего и внешнего тормозного резистора.
+          </p>
+          <p class="control-methods__text">В ситуациях, когда двигатель работает в режиме генератора (при направлении действия момента обратно направлению скорости) происходит возврат энергии от серводвигателя в блок управления. Такая энергия называется рекуперативной. Рекуперативная энергия накапливается в сглаживающем конденсаторе привода. Если мощность рекуперативной энергии превышает емкость конденсатора, применяется регенеративный резистор, поглощающий излишек энергии.</p>
+          <p class="control-methods__text">Регенеративный резистор также называют рекуперативным или тормозным резистором.</p>
+          <p class="control-methods__text control-methods__text-stout">Возможные ситуации, при которых происходит возврат рекуперативной энергии:</p>
+          <ul class="control-methods__sublist">
+            <li>Во время торможения двигателя</li>
+            <li>Перемещение по вертикальной оси</li>
+            <li>Вращение вала двигателя под воздействием внешней нагрузки</li>
+          </ul>
+          <p class="control-methods__text">Встроенный тормозной резистор может использоваться только кратковременно для случаев торможения привода. Если емкости встроенного резистора недостаточно, блок управления позволяет осуществить подключение внешнего тормозного резистора.</p>
+        </div>
+      </section>
+    </main>
+
+    <?php include "footer.htm"; ?>
+  </div>

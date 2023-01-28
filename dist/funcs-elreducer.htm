@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Электронная редукция</title>
+  <meta name="description" content="Сервоприводы SERVO-E имеют функцию электронной редукции, которая используется для назначения коэффициента масштабирования.">
+
+    <?php include "header.htm"; ?>
+    <main class="main" id="category__capability">
+      <section class="breadcrumbs">
+        <div class="container">
+          <? include "php/breadcrumbs.php"; ?>
+        </div>
+      </section>
+
+      <section class="control-methods">
+        <div class="control-methods__container">
+          <div class="control-methods__item">
+            <h1 class="control-methods__title">
+              Электронная редукция
+            </h1>
+            <p class="control-methods__text">
+              Предлагаемые сервоприводы имеют функцию электронной редукции. Электронная редукция используется для назначения коэффициента масштабирования, т.е. указания величины перемещения, соответствующей одному управляющему сигналу при <a class="control-methods__text-link" href="/pulse-position-control.htm">импульсном управлении положением</a> .
+            </p>
+            <p class="control-methods__text">Отдельно назначаются числитель и&nbsp;знаменатель, поддерживается динамическое переключение между коэффициентами во&nbsp;время работы. Функция используется для управления посредством внешнего контроллера без пересчета количества импульсов энкодера. В&nbsp;современных версиях сервоприводов возможно использование как 16-битного, так и&nbsp;32-битного редуктора. При использовании 32-битного электронного редуктора нет ограничений на&nbsp;диапазон вводимых значений. Электронный редуктор может использоваться как для более удобного расчета при управлении перемещением, так и&nbsp;для снижения числа управляющих импульсов в&nbsp;случае использования низкоскоростных управляющих контроллеров.</p>
+            <p class="control-methods__text">Основная задача электронного редуктора&nbsp;&mdash; установить соответствие количества входных управляющих импульсов внешнего контроллера любой величине хода детали. Минимальная единица задания положения, соответствующая одному управляющему импульсу внешнего контроллера, называется единицей перемещения.</p>
+            <p class="control-methods__text control-methods__text-stout">Простой пример использования функции электронного редуктора для энкодера 2500 имп/об:</p>
+            <ul class="control-methods__cards">
+              <li class="control-methods__card">
+                <h2 class="control-methods__card-title control-methods__card-title--first">
+                  Электронный редуктор не используется
+                </h2>
+                <img class="control-methods__card-pic" src="images/capability/funcs-elreducer-1.png" alt=" Электронный редуктор не используется">
+                <div class="control-methods__card-text">
+                  <p>Для перемещения детали на 10 мм:</p>
+                  <p>Таким образом, 10/6= 1,6666 оборота. 2500 x 4 импульсов равно 1&nbsp;обороту, т.е. 1,6666 x 2500 x 4 = 16 666&nbsp;импульсов</p>
+                  <p>Для перемещения детали на 10 мм необходимо подать входной сигнал из 16 666 импульсов.</p>
+                </div>
+
+              </li>
+
+              <li class="control-methods__card">
+                <h2 class="control-methods__card-title control-methods__card-title--second">
+                  Электронный редуктор используется
+                </h2>
+                <img class="control-methods__card-pic" src="images/capability/funcs-elreducer-2.png" alt="Электронный редуктор используется">
+                <div class="control-methods__card-text">
+                  <p>Для перемещения детали на 10 мм:</p>
+                  <p>Единица перемещения равна 1 мкм. Таким образом, для перемещения детали на 10 мм (10000 мкм), 1&nbsp;импульс = 1&nbsp;мкм, 10000/1 = 10&nbsp;000&nbsp;импульсов.</p>
+                  <p>Для перемещения детали на 10 мм необходимо подать входной сигнал из 10 000 импульсов.</p>
+                </div>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <?php include "footer.htm"; ?>
+  </div>

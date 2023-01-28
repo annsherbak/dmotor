@@ -1,0 +1,23 @@
+
+$white: #FFFFFF;
+
+$accent: #D1352F;
+
+$main: #102542;
+
+$main-light:#21395A;
+
+$text: #3B373A;
+
+$blue-light:#F6F9FF;
+
+$grey-light:#ECF0F5;
+
+$grey: #7d7d82;
+
+
+@mixin main-title {
+  font-family: 'Tahoma';
+  font-style: normal;
+  font-weight: 700;
+}

@@ -1,0 +1,170 @@
+.series {
+  margin-top:20px;
+  margin-bottom: 74px;
+  &__title {
+    @include main-title;
+    font-size: 30px;
+    line-height: 120%;
+    margin-bottom: 10px;
+  }
+  &__comment {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 56px;
+  }
+  &__cards {
+    display: flex;
+    flex-direction: column;
+  }
+  &__card {
+    margin-bottom: 16px;
+    padding: 24px 20px;
+    background: $grey-light;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  &__card:last-child {
+    margin-bottom: 0;
+  }
+  &__card-link {
+    position: inherit;
+    width: fit-content;
+    color: $main;
+    margin-top: 16px;
+  }
+  &__card-item {
+    max-width: 510px;
+  }
+  &__card-item:first-child {
+    margin-right: 32px;
+  }
+  &__card-item:nth-child(2) {
+    margin-right: 76px;
+  }
+  &__card-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+  }
+  &__card-title:hover {
+    text-decoration: underline;
+  }
+  &__card-title:active {
+    opacity: 0.7;
+  }
+  &__card-desc {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  &__card-link {
+    color: inherit;
+  }
+  &__card-list a {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height:200%;
+    color: $main;
+  }
+  &__card-list li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  &__card-list li:hover {
+    color: $accent;
+    fill: $accent;
+    transition: all 0.3s ease;
+  }
+  &__card-list a:hover {
+    color: $accent;
+    transition: all 0.3s ease;
+  }
+  &__card-list svg {
+    display: block;
+  }
+  &__container-svg {
+    display: none;
+  }
+}
+@media screen and(max-width:1170px) {
+  .series {
+    margin-top: 85px;
+    margin-bottom: 52px;
+    &__title {
+      font-size: 26px;
+      line-height: 130%;
+    }
+    &__comment {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 52px;
+    }
+    &__card {
+      padding: 20px 10px;
+    }
+    &__card-item {
+      max-width: 40%;
+    }
+    &__card-item:first-child {
+      margin-right:  10px;
+    }
+    &__card-item:nth-child(2) {
+      margin-right: 15px;
+    }
+    &__card-title {
+      margin-bottom: 10px;
+      font-size: 19px;
+      line-height: 23px;
+    }
+    &__card-pic {
+      max-width: none;
+    }
+    &__card-list a {
+      font-size: 13px;
+      line-height: 194%;
+    }
+    &__card-desc {
+      font-size: 12px;
+      line-height: 140%;
+    }
+  }
+}
+@media screen and(max-width:767px) {
+  .series {
+    margin-top: 62px;
+    margin-bottom: 107px;
+  
+  &__title {
+    font-size: 18px;
+    line-height: 120%;
+    margin-bottom: 16px;
+  }
+  &__comment {
+    font-size: 12px;
+    line-height: 140%;
+    margin-bottom: 42px;
+  }
+  &__card {
+    flex-direction: column;
+    align-items:flex-start;
+  }
+  &__card-item {
+    max-width: none;
+  }
+  &__card-item:first-child {
+    margin: 0;
+    margin-bottom: 24px;
+    align-self: center;
+  }
+  &__card-item:nth-child(2) {
+    margin: 0;
+    margin-bottom: 16px;
+  }
+  &__card-title {
+    font-size: 16px;
+    line-height: 22px;
+    }
+  }
+}

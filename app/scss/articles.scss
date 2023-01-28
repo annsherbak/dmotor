@@ -1,0 +1,374 @@
+
+.articles {
+  margin-top: 20px;
+  margin-bottom: 72px;
+  &__container {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  &__title {
+    @include main-title;
+    font-size: 30px;
+    line-height: 123.7%;
+    padding-left: 12px;
+    margin-bottom: 24px;
+    position: relative;
+  }
+  &__title::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: $accent;
+    left: 0;
+    bottom: 0;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 19px;
+    color: $grey;
+    margin-bottom: 42px;
+  }
+  &__cards {
+    display: flex;
+    gap: 30px;
+  }
+  &__card {
+    border: 1px solid $main;
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__card:first-child {
+    max-width: 350px;
+  }
+  &__card:last-child {
+    max-width: 540px;
+  }
+  &__card-title {
+    @include main-title;
+    font-size: 20px;
+    line-height: 24px;
+    color: $main;
+    margin-bottom: 24px;
+  }
+  &__card-text {
+    margin-bottom: 20px;
+  }
+  &__card-links {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__card-links a {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 140%;
+    color: inherit;
+    padding-right: 5px;
+  }
+  &__card-links li {
+    display: flex;
+    align-items: center;
+    color: $main;
+  }
+  &__card-links li:hover {
+    color: $accent;
+  }
+  &__card-links li:active {
+    opacity: 0.6;
+  }
+}
+.article {
+  &__title {
+    @include main-title;
+    font-size: 24px;
+    line-height: 29px;
+    position: relative;
+    padding-left: 55px;  
+    margin-bottom: 42px;
+  }
+  
+  &__title::before {
+      content: url(../images/svg/functions__subtitle-pic.svg);
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      left: 0;
+      top: -30%;
+  }
+  &__item {
+    margin-bottom: 32px;
+  }
+  &__item-title {
+    @include main-title;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+  &__item-text p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 16px;
+  }
+  &__item-text a {
+    color: inherit;
+    text-decoration: underline;
+  }
+  &__item-text a:hover {
+    color: $accent;
+  }
+  &__item-text--list {
+    list-style:disc !important;
+    list-style-position: inside !important;
+  }
+  &__item-text--list li,
+  &__item-sublist li {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 4px;
+  }
+  &__item-sublist {
+    list-style-position: inside !important;
+  }
+  &__item-text p:last-child {
+    margin-bottom: 0;
+  }
+  &__item-pic {
+    margin: 32px 0;
+  }
+  &__item-pic img {
+    margin: 0 auto;
+  }
+  &__item-pic--alone {
+     margin: 16px 0;
+  }
+  &__item-pic--alone figcaption {
+    text-align: center;
+  }
+  &__item-pic--alone img {
+    margin: 0 auto;
+  }
+  &__item-pic figcaption {
+    font-size: 14px;
+    line-height: 19px;
+    color: $grey;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__item-flexbox {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  &__item-flexbox img {
+    height: max-content;
+    width: max-content;
+    max-width: none;
+  }
+  &__item-flexbox figcaption p {
+    margin-bottom: 16px;
+  }
+  &__list {
+    list-style-position: inside;
+  }
+  &__list li {
+    margin-bottom: 16px;
+  }
+  &__list-title {
+    margin-bottom: 8px;
+    display: inline-block;
+    
+  }
+  &__item-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  &__item-list li {
+    max-width: 300px;
+  }
+  &__item-table {
+    border-collapse: collapse;
+    height: 100%;
+  }
+  &__item-table td {
+    border: 1px solid $text;
+    padding: 14px 8px;
+    width:fit-content;
+
+  }
+  &__item-table--color {
+    background: $blue-light;
+  }
+}
+@media screen and(max-width: 1170px) {
+  .articles{
+    margin-top: 85px;
+    margin-bottom: 52px;
+    &__container {
+      padding: 0 30px;
+    }
+    &__title {
+      font-size: 26px;
+      line-height: 130%;
+      margin-bottom: 24px;
+    }
+    &__text {
+      margin-bottom: 32px;
+    }
+    &__cards {
+      gap: 16px;
+    }
+    &__card {
+      padding: 25px;
+    }
+    &__card:first-child {
+      width: 40%;
+    }
+    &__card:last-child {
+      width: 60%;
+    }
+    &__card-title {
+      margin-bottom: 16px;
+    }
+    &__card-links {
+      gap: 12px;
+      align-items: flex-start;
+
+    }
+    &__card-links li {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    &__card-links a {
+      padding: 0;
+      padding-left: 8px;
+    }
+  }
+  .article {
+    &__title {
+      font-size: 22px;
+      line-height: 26px;
+    }
+    &__item-text p,
+    &__item-text--list li,
+    &__item-sublist li {
+      font-size: 14px;
+      line-height: 19px;
+    }
+    &__item-pic figcaption {
+      font-size: 12px;
+      line-height: 16px;
+    }
+    &__item-title {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    &__item-list li {
+      max-width: none;
+      width: 49%;
+    }
+  }
+    
+}
+@media screen and(max-width: 767px) {
+  .articles {
+    margin-top: 62px;
+    margin-bottom: 107px;
+    &__container {
+      padding: 0 15px;
+    }
+    &__title {
+      margin-bottom: 16px;
+    }
+    &__text {
+      font-size: 12px;
+      line-height: 140%;
+      margin-bottom: 47px;
+    }
+    &__cards {
+      flex-direction: column;
+      gap: 32px;
+    }
+    &__card {
+      width: 100% !important;
+      max-width: none;
+      padding: 20px;
+    }
+    &__card-title {
+      font-size: 16px;
+      line-height: 120%;
+    }
+    &__card-text {
+      font-size: 12px;
+      line-height: 140%;
+    }
+    &__card-links a {
+      font-size: 13px;
+      line-height: 140%;
+    }
+  }
+  .article {
+    &__title {
+      padding-left: 35px;
+      margin-bottom: 16px;
+      font-size: 18px;
+      line-height: 120%;
+    }
+    &__title::before {
+      content: url(../images/svg/functions__subtitle-pic--mobil.svg);
+      width: 30px;
+      height: 30px;
+    }
+    &__title::after {
+      left: 35px;
+    }
+    &__item {
+      margin-bottom: 24px;
+    }
+    &__item-pic {
+      margin: 16px 0;
+    }
+    
+    &__item-text p,
+    &__item-text--list li,
+    &__item-sublist li {
+      font-size: 12px;
+      line-height: 16px;
+      margin-bottom: 8px;
+    }
+    &__item-title {
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 12px;
+    }
+    &__item-pic figcaption p {
+      font-size: 11px;
+      line-height: 14px;
+      margin-bottom: 8px;
+    }
+    &__item-flexbox {
+      flex-direction: column;
+      gap: 0;
+    }
+    &__item-flexbox--reverse {
+      flex-direction: column-reverse;
+    }
+    &__list-title {
+      font-size: 12px;
+      line-height: 16px;
+    }
+    &__item-list li {
+      width: 100%;
+    }
+    &__item-table td {
+      font-size: 11px;
+      line-height: 14px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Установка ограничения перемещения</title>
+  <meta name="description" content="Использование функции ограничения перемещения позволит предотвратить перемещение за пределы установленных границ.">
+
+    <?php include "header.htm"; ?>
+    <main class="main" id="category__capability">
+      <section class="breadcrumbs">
+        <div class="container">
+          <? include "php/breadcrumbs.php"; ?>
+        </div>
+      </section>
+      <section class="control-methods">
+        <div class="control-methods__container">
+          <h1 class="control-methods__title">
+            Установка ограничения перемещения
+          </h1>
+          <p class="control-methods__text">
+            Если существуют механическое ограничение перемещения, то&nbsp;использование этой функции позволит предотвратить выход системы за&nbsp;пределы установленных границ.
+          </p>
+          <p class="control-methods__text">Датчики на&nbsp;ограничение перемещения подключаются ко&nbsp;входам блока управления (отдельные входы ля&nbsp;ограничения движения в&nbsp;прямом и&nbsp;реверсном направлениях). Пока на&nbsp;входы блока управления поступает сигнал, движение в&nbsp;заданном направлении разрешено. При снятии сигнала движение прекращается.</p>
+          <img class="control-methods__card-pic" src="images/capability/funcs-limiting-movement.png" alt="Установка ограничения перемещения">
+          <p class="control-methods__text">Таким образом, при выходе рабочего органа машины за&nbsp;пределы хода сигнал переходит в&nbsp;состояние OFF. Этот сигнал может использоваться внешним контроллером для прекращения подачи задающего сигнала.</p>
+
+        </div>
+      </section>
+    </main>
+
+    <?php include "footer.htm"; ?>
+  </div>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блокировка сигналов управления положением</title>
+  <meta name="description" content="Функция блокировки сигналов управления положением доступна при внешнем импульсном задании положения.">
+
+    <?php include "header.htm"; ?>
+    <main class="main" id="category__capability">
+      <section class="breadcrumbs">
+        <div class="container">
+          <? include "php/breadcrumbs.php"; ?>
+        </div>
+      </section>
+      <section class="control-methods">
+        <div class="control-methods__container">
+          <h1 class="control-methods__title">
+            Блокировка сигналов управления положением
+          </h1>
+          <p class="control-methods__text">
+          Функция блокировки сигналов управления положением доступна при <a class="control-methods__text-link" href="/pulse-position-control.htm"> внешнем импульсном задании положения</a>.
+          </p>
+          <p class="control-methods__text">Включение/выключение функции блокировки импульсов осуществляется внешним дискретным сигналом, подаваемым на один из входов сервоусилителя. Эту функцию можно использовать, например, при необходимости остановить двигатель, не прекращая следование управляющих импульсных сигналов с внешнего управляющего контроллера.</p>
+          <img class=control-methods__pic" src="./images/capability/funcs-block-signal.gif" alt="">
+        </div>
+      </section>
+    </main>
+
+    <?php include "footer.htm"; ?>
+  </div>

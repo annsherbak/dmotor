@@ -1,0 +1,8 @@
+# BEGIN Hide My Links
+
+
+AddHandler server-parsed .shtml .shtm .html .htm
+RemoveHandler .html .htm
+AddType application/x-httpd-php .php .htm .html .phtml
+
+

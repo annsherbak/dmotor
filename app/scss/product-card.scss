@@ -1,0 +1,1006 @@
+.product-card {
+  margin-top: 20px;
+  margin-bottom: 52px;
+  position: relative;
+
+  &__top {
+    display: flex;
+    margin-bottom: 56px;
+    align-items: center;
+  }
+
+  &__container {
+    max-width: 540px;
+    margin-right: 170px;
+  }
+
+  &__title {
+    @include main-title;
+    font-size: 30px;
+    line-height: 123%;
+    position: relative;
+    margin-bottom: 16px;
+  }
+
+  &__text p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__desc-item {
+    margin-bottom: 56px;
+    
+  }
+  &__desc-item--flex {
+    max-width: 540px;
+    width: 100%;
+  }
+
+  &__desc-features {
+    max-width: 540px;
+  }
+
+  &__desc-feature {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__desc-feature .card__feature-left {
+    color: $grey;
+  }
+
+  &__desc-title {
+    font-size: 21px;
+    line-height: 29px;
+    padding-left: 8px;
+    padding-bottom: 0;
+    margin-bottom: 16px;
+    position: relative;
+  }
+
+  &__desc-title::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: $accent;
+    left: 0;
+    bottom: 0;
+  }
+  &__desc-container {
+    display: flex;
+    gap: 55px;
+  }
+  &__desc-list {
+    list-style: disc !important;
+    padding-left: 20px !important;
+  }
+  
+  &__desc-list li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  &__desc-buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__desc-buttons a {
+    font-size: 16px;
+    line-height: 22px;
+    color: $white;
+    padding: 12px 20px;
+    background: $main-light;
+    border-radius: 4px;
+
+  }
+
+  &__desc-buttons a:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+  }
+
+  &__desc-buttons a:active {
+    opacity: 0.7;
+  }
+
+  &__desc-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__desc-card {
+    width: 48%;
+    background: $blue-light;
+    border-radius: 20px;
+    padding: 20px;
+  }
+
+  &__desc-card--title {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 4px;
+  }
+
+  &__desc-card--comment {
+    font-size: 14px;
+    line-height: 18px;
+    color: $grey;
+    margin-bottom: 16px;
+  }
+
+  &__desc-pic {
+    position: relative;
+    width: fit-content;
+  }
+
+  &__desc-pic--comment {
+    position: absolute;
+    right: 10px;
+    bottom: 2px;
+    font-size: 12px;
+    line-height: 14px;
+
+  }
+
+  &__desc-pic--low,
+  &__desc-pic--table {
+    right: 10px;
+    bottom: -40px;
+  }
+  &__desc-pic--comment {
+    bottom: -12px;
+  }
+
+  &__desc-pic--comment ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    list-style-position: inside !important;
+    justify-content: space-between;
+  }
+
+  &__desc-pic--comment li {
+    padding-right: 10px;
+  }
+  &__desc-pic--comment table {
+    border-collapse: collapse;
+  }
+  &__desc-pic--comment th,
+  &__desc-pic--comment td {
+    padding: 4px !important;
+    border: 1px solid #828282;
+    text-align: left;
+  }
+  &__desc-pic--table {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-collapse: collapse;
+    width: max-content;
+    text-align: left;
+    border: 1px solid #828282;
+    
+  }
+  &__desc-pic--table th {
+    min-width: auto !important;
+    text-align: left;
+
+  }
+  &__desc-pic--table td, th {
+    font-weight: 400;
+    padding: 5px;
+    border: 1px solid #828282;
+    width:fit-content;
+    text-align: center;
+    font-size: 13px;
+    line-height: 16px;
+    
+  }
+  &__desc-reductor {
+    padding-bottom: 180px;
+  }
+
+  &__table-container {
+    overflow-x: auto;
+  }
+
+  &__table {
+    border-collapse: collapse;
+    width: max-content;
+    text-align: left;
+  }
+
+  &__table td,
+  th {
+    padding: 12px 10px;
+    border: 1px solid #828282;
+    min-width: 100px;
+    max-width: 500px;
+  }
+  &__table td  {
+    text-align: center;
+  }
+  &__table td:first-child {
+    text-align: left;
+  }
+  &__table td:nth-child(2n) {
+    background: $blue-light;
+  }
+
+  &__table-ratios th:nth-child(2n-1) {
+    background: $blue-light;
+  }
+
+  &__form {
+    position: sticky;
+    margin-left: auto;
+    margin-right: 0;
+    width: 330px;
+    bottom: 0px;
+    right: 0;
+
+  }
+
+  &__form-title {
+    position: relative;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 8px;
+
+  }
+
+  &__form-container {
+    position: absolute;
+    background: #E1EEFF;
+    padding: 32px;
+    padding-bottom: 42px;
+    bottom: 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  &__form-desc {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 16px;
+  }
+
+  &__form-email {
+    background: #FFFFFF;
+    border-radius: 5px;
+    border: 1px solid $main;
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+
+  &__form-button {
+    display: block;
+    background: $main-light;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 19px;
+    color: $white;
+    padding: 10px;
+  }
+
+  &__form-done {
+    margin-top: 8px;
+    color: $grey;
+    position: relative;
+    padding-left: 40px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &__form-done::after {
+    content: url(../images/svg/index__about-person.svg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &__form-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  &__form-close:active {
+    opacity: 0.6;
+  }
+
+  &__desc-elements {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 730px;
+    gap: 30px;
+
+  }
+
+  &__desc-element {
+    height: auto;
+    width: 48%;
+    padding: 20px;
+    border: 1px solid $grey;
+    border-radius: 20px;
+  }
+
+  &__desc-element--title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+
+  &__desc-element--text {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 4px;
+  }
+
+  &__desc-element--list {
+    list-style: disc !important;
+    padding-left: 15px !important;
+    margin: 10px 0;
+
+  }
+
+  &__desc-element--comment {
+    text-decoration: underline;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__desc-element--list li {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__desc-pic--list li {
+    color: $grey;
+    margin-bottom: 4px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__characteristics {
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 30px;
+
+  }
+
+  &__characteristic {
+    padding: 20px;
+    background: $blue-light;
+    border-radius: 10px;
+
+  }
+
+  &__specification {
+    grid-column: span 1;
+    grid-row: span 7;
+  }
+
+  &__storage {
+    grid-column: span 1;
+    grid-row: span 3;
+  }
+
+  &__control {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+  &__characteristic-item {
+    margin-bottom: 16px;
+  }
+
+  &__characteristic-title {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 29px;
+    padding-left: 12px;
+    margin-bottom: 18px;
+  }
+
+  &__characteristic-subtitle {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: $grey;
+    margin-bottom: 10px;
+  }
+
+  &__characteristic-list li {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px;
+  }
+
+  &__characteristic-list li::before {
+    content: url(../images/svg/index__application-check.svg);
+    width: 20px;
+    height: 19px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__characteristic-sublist {
+    list-style: disc !important;
+    list-style-position: inside !important;
+
+  }
+
+  &__characteristic-sublist li {
+    padding: 0;
+    margin: 4px 0;
+  }
+
+  &__characteristic-sublist li::before {
+    content: '';
+  }
+
+  &__top-info {
+    margin: 16px 0;
+
+  }
+
+  &__top-info p {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+  }
+
+  &__top-list {
+    margin-top: 4px;
+    list-style: disc !important;
+    list-style-position: inside !important;
+  }
+
+  &__top-list li {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__top-features {
+    font-size: 16px;
+    line-height: 22px;
+    max-width: 450px;
+  }
+
+  &__top-features .card__feature-left {
+    color: $grey;
+  }
+  &__cards {
+    display: flex;
+    gap: 55px;
+
+  }
+  &__card {
+    width: 48%;
+    background: $blue-light;
+    border-radius: 10px;
+    padding: 40px 80px 50px;
+  }
+  
+  &__card-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 24px;
+  }
+  &__card-features {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 42px;
+  }
+  &__card-features .card__feature-left {
+    color: $grey;
+  }
+  &__card-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 45px;
+  }
+  &__card-list li {
+    width: 40%;
+    color: $grey;
+    font-size: 16px;
+    line-height: 22px;
+
+  }
+  &__card-list span {
+    text-decoration: underline;
+    color: $text;
+  }
+  &__card-sublist li {
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 25px;
+    position: relative;
+    white-space: nowrap;
+
+  }
+  &__card-sublist li::before {
+    content: url(../images/svg/black_check.svg);
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+  }
+  &__item-table {
+    border-collapse: collapse;
+    width: fit-content;
+  }
+  &__item-table tr:nth-child(even) {
+     background: $blue-light;
+  }
+  &__item-table td {
+    text-align: center;
+    border: 1px solid #828282;
+    padding: 10px;
+  }
+  &__item-table td span,
+  &__item-table--comment span
+   {
+    color: $accent;
+  }
+  &__item-table th span {
+    display: block;
+  }
+  &__item-table--comment {
+    color: $grey;
+  }
+}
+
+@media screen and(max-width: 1170px) {
+  .product-card {
+    margin-top: 35px;
+    &__top {
+      align-items: center;
+      
+      margin-bottom: 46px;
+    }
+
+    &__container {
+      max-width: none;
+      width: 65%;
+      margin: 0;
+      margin-right: 30px;
+    }
+
+    &__title {
+      font-size: 26px;
+      line-height: 127%;
+    }
+
+    &__text p {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &__desc-title {
+      font-size: 21px;
+      line-height: 29px;
+    }
+    
+    &__desc-list li {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+    }
+
+    &__desc-reductor {
+      padding-bottom: 200px;
+    }
+
+    &__desc-container {
+      gap: 36px;
+      display: flex;
+    }
+
+    &__desc-item--flex {
+      width: 48%;
+    }
+
+    &__desc-buttons {
+      flex-direction: column;
+      width: max-content;
+    }
+
+    &__desc-buttons a {
+      font-size: 14px;
+      line-height: 19px;
+      padding: 12px 30px;
+    }
+
+    &__desc-item {
+      margin-bottom: 36px;
+    }
+
+    &__desc-feature {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &__desc-cards {
+      gap: 15px;
+    }
+
+    &__desc-card {
+      padding: 20px;
+    }
+
+    &__desc-card--title {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 4px;
+    }
+
+    &__table {
+      width: 100%;
+    }
+
+    &__table td,
+    th {
+      font-size: 12px;
+      line-height: 140%;
+      padding: 8px;
+      max-width: 400px;
+
+    }
+
+    &__form {
+      position: static;
+    }
+
+    &__form-container {
+      margin: 0;
+      margin-right: 30px;
+      padding: 16px;
+    }
+
+    &__desc-elements {
+      max-height: none;
+
+    }
+
+    &__desc-element {
+      width: 100%;
+    }
+
+    &__desc-element--comment,
+    &__desc-element--text {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &__desc-element--list li {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &__desc-element--title {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 12px;
+    }
+
+    &__desc-element--flexbox {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    &__desc-pic--list li {
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &__characteristics {
+      gap: 15px;
+      width: 100%;
+    }
+
+    &__characteristic-subtitle {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 10px;
+    }
+
+    &__characteristic-list li {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 8px;
+    }
+    &__top-list li {
+      font-size: 14px;
+      line-height: 19px;
+    }
+    &__top-features {
+      font-size: 14px;
+      line-height: 19px;
+      max-width: 360px;
+    }
+    &__cards {
+      gap: 15px;
+    }
+    &__card {
+      width: 48%;
+      padding: 20px 15px;
+    }
+    &__card-features {
+      font-size: 14px;
+      line-height: 19px;
+    }
+    &__card-list {
+      gap: 40px;
+
+    }
+    &__card-list li {
+      width: 43%;
+      font-size: 14px;
+      line-height: 19px;
+    }
+    &__item-table--container {
+      overflow-x: auto;
+    }
+    &__desc-pic--table {
+      position:static;
+      margin-top: 15px;
+    }
+  }
+}
+
+@media screen and(max-width: 767px) {
+  .product-card {
+    margin-top: 62px;
+    margin-bottom: 82px;
+
+    &__top {
+      flex-direction: column-reverse;
+      margin-bottom: 42px;
+    }
+
+    &__desc-item {
+      margin-bottom: 32px;
+    }
+
+    &__container {
+      width: 100%;
+      margin: 0;
+    }
+
+    &__title {
+      font-size: 18px;
+      line-height: 123%;
+    }
+
+    &__text {
+      font-size: 12px;
+      line-height: 140%;
+    }
+
+    &__pic {
+      margin-bottom: 16px;
+    }
+   
+
+    &__desc-title {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &__desc-list {
+      list-style:disc  !important;
+      padding-left: 20px !important;
+    }
+    &__desc-list li {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+    }
+
+    &__desc-container {
+      gap: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__desc-reductor {
+      padding-bottom: 0;
+    }
+
+    &__desc-item--flex {
+      width: 100%;
+    }
+
+    &__desc-buttons {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+
+    &__desc-buttons a {
+      font-size: 14px;
+      line-height: 19px;
+      padding: 12px 30px;
+      width: fit-content;
+    }
+
+    &__desc-feature {
+      font-size: 12px;
+      line-height: 140%;
+    }
+
+    &__desc-cards {
+      flex-direction: column;
+    }
+
+    &__desc-card {
+      width: 100%;
+    }
+
+    &__desc-card--title {
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 8px;
+    }
+    &__desc-pic--table th {
+      max-width: 100px;
+      font-size: 11px;
+      line-height: 14px;
+    }
+    &__desc-pic--table td{
+      max-width: 50px;
+      font-size: 11px;
+      line-height: 14px;
+    }
+    &__desc-pic img {
+      width: 100%;
+    }
+    &__desc-pic--comment {
+      position: static;
+      font-size: 11px;
+      width: 100%;
+    }
+    &__desc-pic--comment table {
+      width: 100%;
+    }
+
+    &__desc-pic--comment ul {
+      flex-wrap: wrap;
+    }
+
+    &__desc-pic--comment li {
+      padding-bottom: 2px;
+    }
+
+    &__form {
+      display: block;
+      position: static;
+      width: 100%;
+    }
+
+    &__form-container {
+      position: relative;
+      padding: 16px;
+      margin: 0;
+    }
+
+    &__form-desc {
+      font-size: 12px;
+      line-height: 130%;
+    }
+
+    &__desc-card--comment {
+      font-size: 11px;
+      line-height: 140%;
+    }
+
+    &__desc-elements {
+      gap: 16px;
+    }
+
+    &__desc-element--list li,
+    &__desc-element--text,
+    &__desc-element--comment {
+      font-size: 12px;
+      line-height: 140%;
+    }
+
+    &__desc-pic--list {
+      font-size: 12px;
+      line-height: 140%;
+    }
+
+    &__characteristics {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__characteristic {
+      padding: 15px;
+    }
+
+    &__characteristic-list li {
+      font-size: 12px;
+      line-height: 140%;
+    }
+    &__top-info p,
+    &__top-list li {
+      font-size: 12px;
+      line-height: 140%;
+    }
+    &__top-features {
+      font-size: 12px;
+      line-height: 140%;
+    }
+    &__cards {
+      flex-direction: column;
+    }
+    &__card {
+      width: 100%;
+      background: $white;
+      padding: 0;
+      margin-top: 16px;
+    }
+    &__card-title {
+      font-size: 14px;
+      line-height: 19px;
+    }
+    &__card-features {
+      font-size: 12px;
+      line-height: 140%;
+      margin-bottom: 16px;
+    } 
+    &__card-list {
+      gap: 16px;
+    }
+    &__card-list li {
+      width: 46%;
+      font-size: 12px;
+      line-height: 140%;
+      padding: 10px;
+      background: $grey-light;
+      border-radius: 10px;
+    }
+    &__card-sublist li {
+      padding: 0;
+      padding-left: 25px;
+
+    }
+    &__item-table td, 
+    &__item-table th {
+      font-size: 12px;
+      line-height: 140%;
+    }
+    &__item-table--comment {
+      font-size: 12px;
+      line-height: 140%;
+    }
+
+  }
+
+}

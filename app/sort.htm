@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сервопривод | Продажа сервоприводов и серводвигателей</title>
+  <meta name="description" content="Контакты Сервопривод">
+  
+
+  <?php include "header.htm"; ?>
+
+  <main class="main">
+    <section class="breadcrumbs">
+      <div class="container">
+        <? include "php/breadcrumbs.php"; ?>
+      </div>
+    </section>
+
+    <section class="sorting">
+      <div class="sorting__top">
+        <div class="container">
+          <h1 class="sorting__title series__title">
+            Подобрать по параметрам
+          </h1>
+          <p class="sorting__desc">
+            В&nbsp;ассортименте поставляемых сервоприводов огромное количество моделей и&nbsp;исполнений, отличающихся мощности, размеру, соотношению выходной скорости и&nbsp;крутящего момента, типу и&nbsp;разрешению энкодера. На&nbsp;этой странице можно быстро и&nbsp;удобно осуществить поиск и&nbsp;подбор по&nbsp;характеристикам и&nbsp;выбрать наиболее подходящий по&nbsp;параметрам сервопривод.
+          </p>
+        </div>
+      </div>
+
+      <div class="sorting__options">
+        <div class="container">
+          <div class="sorting__options-container">
+            <div class="sorting__options-item">
+              <form id="filters-form" role="form" class="sorting__form">
+                <div class="sorting__options-item sorting__options-item--flex">
+                  <p class="sorting__options-comment">Подобрать по:</p>
+                  <div class="sorting__options-buttons">
+                    <input type="reset" class="sorting__options-button" id="form__reset-button" value="Очистить все" onclick="window.location.reload();">
+                  </div>
+                </div>
+                <div class="sorting__form-flexbox">
+                  <div class="sorting__form-item sorting__form-encoder">
+                    <div class="sorting__form-item--speed">
+                      <h2 class="sorting__form-title">Скорость</h2>
+                      <div class="sorting__form-container">
+                        <div id="checkboxs-speed" class="sorting__form-item-checkboxs">
+                          <div class="sorting__form-item-checkbox">
+                            <input class="sorting__customized-checkbox" type="checkbox" name="speed[]" id="checkbox-speed-1" value="1500">
+                            <label for="checkbox-speed-1"> 1500 об/мин</label>
+                            <span> (макс. до 3000)</span>
+                          </div>
+
+                          <div class="sorting__form-item-checkbox">
+                            <input class="sorting__customized-checkbox" type="checkbox" name="speed[]" id="checkbox-speed-2" value="2000">
+                            <label for="checkbox-speed-2">2000 об/мин</label>
+                            <span>(макс. до 3000)</span>
+                          </div>
+
+                          <div class="sorting__form-item-checkbox">
+                            <input class="sorting__customized-checkbox" type="checkbox" name="speed[]" id="checkbox-speed-3" value="3000">
+                            <label for="checkbox-speed-3">3000 об/мин </label>
+                            <span>(макс. до 6000)</span>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sorting__form-item--encoder">
+                      <h2 class="sorting__form-title">Энкодер</h2>
+                      <div class="sorting__form-container">
+                        <div id="checkboxs-encoder" class="sorting__form-item-checkboxs">
+                          <div class="sorting__form-item-checkbox">
+                            <input class="sorting__customized-checkbox" type="checkbox" name="encoder[]" id="checkbox-encoder-1" value="1">
+                            <label for="checkbox-encoder-1">Абсолютный <br> оптический 23‑бит <br> <span>8 388 608 имп/об</span></label>
+                          </div>
+                          <div class="sorting__form-item-checkbox">
+                            <input class="sorting__customized-checkbox" type="checkbox" name="encoder[]" id="checkbox-encoder-2" value="2">
+                            <label for="checkbox-encoder-2">Абсолютный <br> магнитный 17‑бит <br> <span>131 072 имп/об</span> </label>
+                          </div>
+
+                          <div class="sorting__form-item-checkbox">
+                            <input class="sorting__customized-checkbox" type="checkbox" name="encoder[]" id="checkbox-encoder-3" value="3">
+                            <label for="checkbox-encoder-3"> Инкрементный <br> оптический 20-бит <br> <span>1 048 576 имп/об</span></label>
+                          </div>
+
+                          <div class="sorting__form-item-checkbox">
+                            <input class="sorting__customized-checkbox" type="checkbox" name="encoder[]" id="checkbox-encoder-4" value="4">
+                            <label for="checkbox-encoder-4">Резолвер <br> <span>65 536 имп/об</span></label>
+                          </div>
+                          <div class="sorting__form-item-checkbox">
+                            <input class="sorting__customized-checkbox" type="checkbox" name="encoder[]" id="checkbox-encoder-5" value="5">
+                            <label for="checkbox-encoder-5">Абсолютный <br> оптический 17‑бит <br> <span>131 072 имп/об</span> </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sorting__form-item sorting__form-item--ipad"></div>
+                  <div class="sorting__form-item sorting__form-item--slider">
+                    <div class="sorting__form-item--power">
+                      <h2 class="sorting__form-title">Мощность, Вт</h2>
+                      <div class="sorting__form-container">
+                        <div class="sorting__form-inputs">
+                          <p>От</p>
+                          <input class="sorting__form-inputs--power" type="text" name="" id="power-input-min" value="50">
+                          <p>до</p>
+                          <input class="sorting__form-inputs--power" type="text" name="" id="power-input-max" value="22000">
+                        </div>
+
+                        <input type="hidden" id="min-power" name="min_power" value="50">
+                        <input type="hidden" id="max-power" name="max_power" value="22000">
+                        <div id="slider-power"></div>
+                        <div class="sorting__form-labels">
+                          <label for="min-power" id="power-label-min">50 Вт </label>
+                          <label for="max-power" id="power-label-max">
+                            22 000 Вт</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sorting__form-item--torque">
+                      <h2 class="sorting__form-title">Номинальный крутящий момент, Нм</h2>
+                      <div class="sorting__form-container">
+                        <div class="sorting__form-inputs">
+                          <p>От</p>
+                          <input class="sorting__form-inputs--torque" type="text" name="" id="power-torque-min" value="0.16">
+                          <p>до</p>
+                          <input class="sorting__form-inputs--torque" type="text" name="" id="power-torque-max" value="140">
+                        </div>
+
+                        <input type="hidden" id="min-torque" name="min_torque" value="0">
+                        <input type="hidden" id="max-torque" name="max_torque" value="500">
+                        <div id="slider-torque"></div>
+                        <div class="sorting__form-labels">
+                          <label for="min_torque" id="torque-label-min">От 0.16 </label>
+                          <label for="min_torque" id="torque-label-max">до 140 </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sorting__form-item sorting__form-flange">
+                    <div class="sorting__form-item--voltage">
+                      <h2 class="sorting__form-title">Напряжение питания</h2>
+                      <div class="sorting__form-container">
+                        <div id="checkboxs-voltage" class="sorting__form-item-checkboxs">
+                          <div class="sorting__form-item-checkbox">
+                            <input class="sorting__customized-checkbox" type="checkbox" name="voltage[]" id="checkbox-voltage-1" value="200">
+                            <label for="checkbox-voltage-1">200В</label>
+                          </div>
+                          <div class="sorting__form-item-checkbox">
+                            <input class="sorting__customized-checkbox" type="checkbox" name="voltage[]" id="checkbox-voltage-2" value="400">
+                            <label for="checkbox-voltage-2">400В</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sorting__form-item--flange">
+                      <h2 class="sorting__form-title">Фланец</h2>
+                      <div class="sorting__form-container">
+                        <div id="checkboxs-flange" class="sorting__form-item-checkboxs">
+                          <div class="sorting__form-item-checkbox">
+                            <input class="sorting__customized-checkbox" type="checkbox" name="flange[]" id="checkbox-flange-1" value="40">
+                            <label for="checkbox-flange-1">40 mm</label>
+                          </div>
+                          <div class="sorting__form-item-checkbox">
+                            <input class="sorting__customized-checkbox" type="checkbox" name="flange[]" id="checkbox-flange-2" value="60">
+                            <label for="checkbox-flange-2">60 mm</label>
+                          </div>
+                          <div class="sorting__form-item-checkbox">
+                            <input class="sorting__customized-checkbox" type="checkbox" name="flange[]" id="checkbox-flange-3" value="80">
+                            <label for="checkbox-flange-3">80 mm</label>
+                          </div>
+                          <div class="sorting__form-item-checkbox">
+                            <input class="sorting__customized-checkbox" type="checkbox" name="flange[]" id="checkbox-flange-4" value="100">
+                            <label for="checkbox-flange-4">100 mm</label>
+                          </div>
+                          <div class="sorting__form-item-checkbox">
+                            <input class="sorting__customized-checkbox" type="checkbox" name="flange[]" id="checkbox-flange-5" value="130">
+                            <label for="checkbox-flange-5">130 mm</label>
+                          </div>
+                          <div class="sorting__form-item-checkbox">
+                            <input class="sorting__customized-checkbox" type="checkbox" name="flange[]" id="checkbox-flange-6" value="180">
+                            <label for="checkbox-flange-6">180 mm</label>
+                          </div>
+                          <div class="sorting__form-item-checkbox">
+                            <input class="sorting__customized-checkbox" type="checkbox" name="flange[]" id="checkbox-flange-7" value="220">
+                            <label for="checkbox-flange-7">220 mm</label>
+                          </div>
+                          <div class="sorting__form-item-checkbox">
+                            <input class="sorting__customized-checkbox" type="checkbox" name="flange[]" id="checkbox-flange-8" value="280">
+                            <label for="checkbox-flange-8">280 mm</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sorting__content">
+        <div class="container">
+          <p class="sorting__content-counter"></p>
+          <p class="sorting__content-warning">
+            Мы&nbsp;не&nbsp;нашли товаров с&nbsp;заданными параметрами. Возможно, их&nbsp;не&nbsp;существует, попробуйте изменить параметры поиска. <br>
+            Также Вы&nbsp;можете позвонить по&nbsp;телефону&nbsp;<a href="tel:+78001009756">8 (800) 100-97-56</a>. Наши консультанты помогут подобрать подходящий для Вас вариант.
+          </p>
+          <ul id="goods" class="sorting__content-list">
+            <!-- шаблон карточек внизу страницы -->
+          </ul>
+          <div class="sorting__content-paggination">
+            <button class="sorting__content-paggination--button sorting__content-paggination--back">Назад</button>
+            <ul class="sorting__content-paggination--pages">
+              <li class="sorting__content-paggination--page active">1</li>
+              <li class="sorting__content-paggination--page">2</li>
+              <li class="sorting__content-paggination--page">3</li>
+              <li class="sorting__content-paggination--page">4</li>
+            </ul>
+            <button class="sorting__content-paggination--button sorting__content-paggination--next">Далее</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </div>
+
+  </main>
+
+  <?php include "footer.htm"; ?>
+  <script id="goods-template" type="text/template">
+              <% _.each(goods, function(item) { %>
+                <li class="sorting__content-card">
+                  <a class='sorting__content-link' href="<%= item.url %>">
+                    <div class="sorting__content-card--top">
+                      <div class="sorting__content-card--container">
+                        <h3 class="sorting__content-card--title">
+                        Сервопривод <%= item.power %> Вт  
+                      </h3>
+                      <span>
+                          <%= item.title %>
+                        </span>
+                      </div>
+                      <img class="sorting__item-pic" src="images/product/<%= item.picture %>" />
+                    </div>
+                    <div class="sorting__content-card--data">
+                      <div class="card__features sorting__content-card--features">
+                        <div class="card__feature sorting__content-card--feature">
+                            <span class="card__feature-left">Мощность</span>
+                            <span class="card__feature-separator"></span>
+                            <span class="card__feature-right"><%= item.power %> Вт</span>
+                         </div>
+
+                         <div class="card__feature sorting__content-card--feature">
+                          <span class="card__feature-left">Ном. момент</span>
+                          <span class="card__feature-separator"></span>
+                          <span class="card__feature-right"><%= item.torque_nominal %> Нм</span>
+                        </div>
+            
+                        <div class="card__feature sorting__content-card--feature">
+                          <span class="card__feature-left">Ном. скорость</span>
+                          <span class="card__feature-separator"></span>
+                          <span class="card__feature-right"><%= item.speed_nominal %> об/мин</span>
+                        </div>
+
+                         <div class="card__feature sorting__content-card--feature">
+                          <span class="card__feature-left">Макс. скорость</span>
+                          <span class="card__feature-separator"></span>
+                          <span class="card__feature-right"><%= item.speed_max %> об/мин</span>
+                        </div>
+            
+                        <div class="card__feature sorting__content-card--feature">
+                          <span class="card__feature-left">Фланец</span>
+                          <span class="card__feature-separator"></span>
+                          <span class="card__feature-right"><%= item.flange %> мм</span>
+                        </div>
+
+                        <div class="card__feature sorting__content-card--feature">
+                          <span class="card__feature-left">Энкодер, тип</span>
+                          <span class="card__feature-separator"></span>
+                          <div class="card__feature-right card__feature-encoder--type"><%= item.encoder %></div>
+                        </div>
+                        <div class="card__feature sorting__content-card--feature">
+                          <span class="card__feature-left">Энкодер, разрешение</span>
+                          <span class="card__feature-separator"></span>
+                          <span class="card__feature-right card__feature-encoder--permit"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="sorting__content-card--button" href="<%= item.url %>">Подробнее</button>
+                    </a>
+                  </li>
+              <% }); %>
+          </script>
+  </div>

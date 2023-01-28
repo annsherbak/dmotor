@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Функция подавления низкочастотных колебаний нагрузки</title>
+  <meta name="description" content="Функция подавления низкочастотной вибрации доступна в блоках управления сервоприводов и обеспечивается за счет расчета положения нагрузки.">
+
+    <?php include "header.htm"; ?>
+    <main class="main" id="category__capability">
+      <section class="breadcrumbs">
+        <div class="container">
+          <? include "php/breadcrumbs.php"; ?>
+        </div>
+      </section>
+      <section class="control-methods">
+        <div class="control-methods__container">
+          <h1 class="control-methods__title">
+            Функция подавления низкочастотных колебаний нагрузки
+          </h1>
+          <div class="control-methods__item">
+            <p class="control-methods__text">
+            Для нагрузки с низкой жесткостью низкочастотная вибрация будет постоянно возникать во время быстрого ускорения или замедления. Вибрация может замедлить время позиционирования и повлиять на эффективность работы системы. Функция подавления низкочастотной вибрации встроена в сервоприводы серии SERVO-EP путем расчета положения нагрузки и ее компенсации.
+          </p>
+          <img class="control-methods__card-pic" src="images/capability/funcs-oscillation-1.gif" alt="Функция подавления низкочастотных колебаний нагрузки">
+          </div>
+          <div class="control-methods__item">
+            <p class="control-methods__text">
+              Для работы функции подавления низкочастотной вибрации необходимую частоту необходимо указать в параметре работы сервоусилителя. Если частота неизвестна и нет возможности выполнить измерение специальным инструментом (например, лазерным интерферометром), можно использовать <a class="control-methods__text-link" href="/funcs-program.htm">программное обеспечение</a> для косвенного определения частоты. Бесплатное ПО позволяет по графику определить время периода колебания системы:
+            </p>
+            <img class="control-methods__card-pic" src="images/capability/funcs-oscillation-2.png" alt="Функция подавления низкочастотных колебаний нагрузки">
+          </div>
+
+          <p class="control-methods__text">Таким образом, при выходе рабочего органа машины за&nbsp;пределы хода сигнал переходит в&nbsp;состояние OFF. Этот сигнал может использоваться внешним контроллером для прекращения подачи задающего сигнала.</p>
+          <p class="control-methods__text">Датчики на&nbsp;ограничение перемещения подключаются ко&nbsp;входам блока управления (отдельные входы ля&nbsp;ограничения движения в&nbsp;прямом и&nbsp;реверсном направлениях). Пока на&nbsp;входы блока управления поступает сигнал, движение в&nbsp;заданном направлении разрешено. При снятии сигнала движение прекращается.</p>
+
+        </div>
+      </section>
+    </main>
+
+    <?php include "footer.htm"; ?>
+  </div>

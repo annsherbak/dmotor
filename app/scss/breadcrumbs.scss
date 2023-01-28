@@ -1,0 +1,52 @@
+.breadcrumbs {
+  margin-top: 60px;
+  &__list {
+    display: flex;
+  }
+
+  &__list li {
+    margin-right: 10px;
+    position: relative;
+    padding-right: 15px;
+    font-family: "Open Sans Regular";
+    color: $grey;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 19px;
+  }
+
+  &__list li::after {
+    display: block;
+    color: $grey;
+    content: '❯';
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    margin: auto;
+    right: 0;
+    top: 0;
+  }
+  &__list li:last-child::after {
+    display: none;
+  }
+
+  &__list a {
+    color:$grey;
+  }
+
+  &__list li:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and(max-width: 1170px) {
+  .breadcrumbs {
+    &__list {
+      flex-wrap: wrap;
+    }
+  }
+}
+@media screen and(max-width: 767px) {
+  .breadcrumbs {
+    display: none;
+  }
+}

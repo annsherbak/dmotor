@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Импульсное управление положением</title>
+  <meta name="description" content="Сервоприводы SERVO-EP обеспечивают три варианта импульсного управления положением:PULSE/DIR - Сигнал Шаг и Направление, CW/CCW - Сигналы «ШАГ» на каждое направление движения, Двухфазный квадратурный сигнал ШАГ">
+
+    <?php include "header.htm"; ?>
+    <main class="main" id="category__capability">
+      <section class="breadcrumbs">
+        <div class="container">
+          <? include "php/breadcrumbs.php"; ?>
+        </div>
+      </section>
+      <section class="control-methods">
+        <div class="control-methods__container">
+          <div class="control-methods__item">
+            <h1 class="control-methods__title">
+              Импульсное управление положением
+            </h1>
+            <p class="control-methods__text">
+              Режим импульсного управления является базовым и&nbsp;одним из&nbsp;наиболее распространенных методов задания положения. Этот метод широко используется в&nbsp;контроллерах, управляющих работой станков ЧПУ, многоосевых системах позиционирования и&nbsp;других устройствах.
+            </p>
+            <p class="control-methods__text">Сервоприводы SERVO-EP обеспечивают три варианта импульсного управления положением:</p>
+            <ul class="control-methods__list">
+              <li>PULSE/DIR (PULSE/SIGN)</li>
+              <li>CW/CCW</li>
+              <li>квадратурный сигнал A и B</li>
+            </ul>
+            <p class="control-methods__text">
+              SERVO-EP при импульсном задании положения поддерживают управляющие сигналы типа линейный драйвер или открытый коллектор (+5В, +12В, +24В).
+            </p>
+          </div>
+          <div class="control-methods__item">
+            <h2 class="control-methods__subtitle">
+              PULSE/DIR - Сигнал «Шаг» и «Направление»
+            </h2>
+            <div class="control-methods__item--container">
+              <div class="control-methods__desc">
+                <p>
+                  Скорость определяется частотой подачи сигнала &laquo;PULS&raquo;, шаг совершается по&nbsp;фронту сигнала. Направление вращения определяется уровнем сигнала &laquo;SIGN&raquo;: движение вперед&nbsp;&mdash; высокий уровень сигнала; реверсное движение&nbsp;&mdash; низкий уровень сигнала.
+                </p>
+
+              </div>
+              <picture class="control-methods__pic">
+                <source media="(max-width: 1170px)" srcset="images/capability/pulse-position__control-1--mobil.png">
+                <img src="images/capability/pulse-position__control-1.png" alt="сервоприводы в Санкт-Петербурге, Москве с доставкой по всей России">
+              </picture>
+            </div>
+          </div>
+
+          <div class="control-methods__item">
+            <h2 class="control-methods__subtitle">
+              CW/CCW - Сигналы «ШАГ» на каждое направление движения
+            </h2>
+            <div class="control-methods__item--container">
+              <div class="control-methods__desc">
+                <p>
+                  Направление движения определяется тем, на&nbsp;какой из&nbsp;входов подаются импульсные сигналы &laquo;ШАГ&raquo;. Каждый шаг совершается по&nbsp;фронту импульса.
+                </p>
+
+              </div>
+              <picture class="control-methods__pic">
+                <source media="(max-width: 1170px)" srcset="images/capability/pulse-position__control-2--mobil.png">
+                <img src="images/capability/pulse-position__control-2.png" alt="сервоприводы в Санкт-Петербурге, Москве с доставкой по всей России">
+              </picture>
+            </div>
+          </div>
+
+          <div class="control-methods__item">
+            <h2 class="control-methods__subtitle">
+              Двухфазный квадратурный сигнал «ШАГ»
+            </h2>
+            <div class="control-methods__item--container">
+              <div class="control-methods__desc">
+                <p>
+                  При таком варианте задания положения импульсный сигнал подается одновременно на&nbsp;два входа и&nbsp;представляет собой две фазы&nbsp;А и&nbsp;В, сдвинутые друг относительно друга на&nbsp;90&deg;.Сдвиг фаз определяет направление вращения:
+                </p>
+                <ul class="control-methods__item-list">
+                  <li>если фаза В опережает фазу А на 90°, будет осуществляться движение в прямом направлении</li>
+                  <li>если фаза А опережает фазу В на 90°, будет осуществляться движение в реверсном направлении</li>
+                </ul>
+              </div>
+
+              <picture class="control-methods__pic">
+                <source media="(max-width: 1170px)" srcset="images/capability/pulse-position__control-3--mobil.png">
+                <img src="images/capability/pulse-position__control-3.png" alt="сервоприводы в Санкт-Петербурге, Москве с доставкой по всей России">
+              </picture>
+            </div>
+          </div>
+
+          <div class="control-methods__item">
+            <h2 class="control-methods__subtitle">
+              Функция блокировки при импульсном управлении положением
+            </h2>
+            <div class="control-methods__item--container">
+              <div class="control-methods__desc">
+                <p>
+                  Функция блокировки позволяет остановить сервопривод, когда сигналы &laquo;ШАГ&raquo; продолжают поступать с&nbsp;контроллера. Для включения/выключения функции блокировки используется внешний дискретный сигнал.
+                </p>
+
+              </div>
+              <picture class="control-methods__pic">
+                <source media="(max-width: 1170px)" srcset="images/capability/pulse-position__control-4--mobil.png">
+                <img src="images/capability/pulse-position__control-4.png" alt="сервоприводы в Санкт-Петербурге, Москве с доставкой по всей России">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <?php include "footer.htm"; ?>
+  </div>

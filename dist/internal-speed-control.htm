@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Задание скорости параметрами, переключение между скоростями внешними сигналами</title>
+  <meta name="description" content="В данном режиме управления сервопривод обеспечивает возможность предварительной установки нескольких значений скоростей (до 7 значений)">
+
+    <?php include "header.htm"; ?>
+    <main class="main" id="category__capability">
+      <section class="breadcrumbs">
+        <div class="container">
+          <? include "php/breadcrumbs.php"; ?>
+        </div>
+      </section>
+      <section class="control-methods">
+        <div class="control-methods__container">
+          <div class="control-methods__item">
+            <h1 class="control-methods__title">
+              Задание скорости параметрами, переключение между скоростями внешними сигналами
+            </h1>
+            <p class="control-methods__text">
+              В данном режиме управления <a href="/servodrive.htm">сервопривод</a> обеспечивает возможность предварительной установки нескольких значений скоростей (до 7 значений). Во время работы переключение между скоростями осуществляется подачей дискретных сигналов на входы сервоусилителя. Комбинация сигналов определяет выбранное значение скорости вращения двигателя. Каждое значение скорости можно определить в прямом или реверсном направлении.
+            </p>
+            <figure>
+              <img src="images/capability/internal-speed-control.png" alt="Задание скорости параметрами, переключение между скоростями внешними сигналами">
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <?php include "footer.htm"; ?>
+  </div>

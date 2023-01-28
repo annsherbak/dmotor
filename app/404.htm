@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Купить сервопривод | Продажа сервоприводов и серводвигателей</title>
+
+  <div class="wrapper">
+    <?php include "header.htm"; ?>
+    <main class="main">
+      <section class="breadcrumbs">
+        <div class="container">
+          <? include "php/breadcrumbs.php"; ?>
+        </div>
+      </section>
+      <div class="container">
+        <section class="form-heandler">
+          <picture class="form-heandler__pic">
+            <source media="(max-width: 767px)" srcset="/images/404-mobil.png">
+            <source media="(max-width: 1170px)" srcset="/images/404-tablet.png">
+            <img src="/images/404-desktop.png" alt="">
+          </picture>
+          <div class="form-heandler__desc">
+            <h1 class="form-heandler__desc-title">
+              Упс, что-то пошло не так
+            </h1>
+            <p class="form-heandler__desc-text">
+              Страница, которую вы&nbsp;запрашиваете не&nbsp;существует или допущена ошибка в&nbsp;адресе
+            </p>
+            <div class="form-heandler__desc-buttons">
+              <a class="form-heandler__desc-buttons--main" href="/">Вернуться на главную</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <?php include "footer.htm"; ?>
+  </div>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Возможности сервоприводов</title>
+  <meta name="description" content="Сервоприводы SERVO-E обеспечивают плавную работу, с контролем по положению, скорости, моменту. Приводы отличаются широким диапазоном рабочих скоростей, высокой точностью позиционирования и плавностью перемещения.">
+
+    <?php include "header.htm"; ?>
+    <section class="breadcrumbs">
+      <div class="container">
+        <? include "php/breadcrumbs.php"; ?>
+      </div>
+    </section>
+    <main class="main" id="category__capability">
+      <section class="capability">
+        <div class="capability__base">
+          <div class="container">
+            <h1 class="series__title">
+              Возможности сервоприводов
+            </h1>
+            <div class="series__comment capability__comment">
+              <p>Сервоприводы SERVO-E обеспечивают плавную работу, с контролем по положению, скорости, моменту. Приводы отличаются широким диапазоном рабочих скоростей, высокой точностью позиционирования и плавностью перемещения.
+              </p>
+              <p>
+                Для удобства работы и расширения сферы возможных применений сервоприводы SERVO-E имеют расширенную функциональность.
+              </p>
+            </div>
+            <div class="capability__tabs">
+              <button class="capability__tab active" data-tab="1">Режимы управления</button>
+              <button class="capability__tab" data-tab="2">Дополнительные функции</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="capability__contents">
+          <div class="capability__container">
+            <div class="capability__mode capability__content active" id="content-1" data-tab="1">
+              <h2 class="capability__title">Режимы управления</h2>
+              <p class="capability__mode-text">
+                Сервоприводы SERVO-EP обеспечивают управление:
+              </p>
+              <ul class="capability__mode-list">
+                <li>Положением</li>
+                <li>Скоростью</li>
+                <li>Моментом</li>
+              </ul>
+              <p class="capability__mode-text">
+                В&nbsp;любом устройстве или оборудовании сервопривод может использоваться для выполнения одной из&nbsp;следующих задач: позиционирование, поддержание заданной скорости, поддержание заданного усилия на&nbsp;валу двигателя.
+              </p>
+              <div class="capability__mode-container">
+                <div class="capability__mode-item">
+                  <h3 class="capability__subtitle">
+                    Управление положением
+                  </h3>
+                  <p class="capability__mode-text"><span>Позиционирование нагрузки</span> – сервопривод используется в режиме управления положением для перемещения нагрузки – по заданной траектории, в заданную координату, смещение на заданную величину и т.п. Основная задача сервопривода – достижение положения, которое указывается одним из поддерживаемых им методов.</p>
+                </div>
+                <div class="capability__mode-item">
+                  <h4 class="capability__sign">
+                    Методы задания положения:
+                  </h4>
+                  <ul class="capability__mode-sublist">
+                    <li><a href="/pulse-position-control.htm">Импульсное управление сигналами PULSE/DIR, CW/CCW, двухфазный сигнал&nbsp;A и&nbsp;B</a></li>
+                    <li><a href="/internal-position-control.htm">Задание параметров перемещения и&nbsp;точек остановки через таблицу параметров</a></li>
+                    <li>CANOpen</li>
+                    <li>EtherCat</li>
+                  </ul>
+                  <p class="capability__mode-text">
+                    При решении задачи позиционирования сервоприводу требуется также указание величины скорости и&nbsp;профили ускорения и&nbsp;замедления. Скорость, ускорение и&nbsp;замедление являются второстепенными величинами при позиционировании, т.е. сервопривод может снизить скорость ниже указанной величины, если это требуется для достижения заданного положения. Но&nbsp;в&nbsp;любом случае, скорость вращения не&nbsp;будет превышать заданную величину.
+                  </p>
+                </div>
+                <div class="capability__mode-item">
+                  <h4 class="capability__sign">
+                    Импульсное управление положением
+                  </h4>
+                  <p class="capability__mode-text">
+                    Для позиционирования предусмотрена функция управления сигналами PULSE/DIR или CW/CCW. Чаще всего данная функция востребована в&nbsp;станках с&nbsp;ЧПУ. При управлении сигналами PULSE/DIR (&quot;Шаг&quot;/&quot;Направление&quot;) скорость перемещения пропорциональна частоте следования сигналов PULSE (импульсы напряжения +24В), направление определяется уровнем сигнала DIR.
+                  </p>
+                  <p class="capability__mode-text">
+                    CW/CCW&nbsp;&mdash; модификация управления PULSE/DIR&nbsp;&mdash; для вращения по&nbsp;часовой стрелке подается управляющая частота PULSE на&nbsp;вход&nbsp;CW, против часовой стрелки&nbsp;&mdash; на&nbsp;вход CCW.
+                  </p>
+                  <p class="capability__mode-text">
+                    Двухфазный импульсный сигнал (фазы&nbsp;A и&nbsp;B со&nbsp;сдвигом&nbsp;90&deg;) используется при работе с&nbsp;некоторыми контроллерами, при синхронизации привода с&nbsp;внешними энкодерами, сельсинами, а&nbsp;также при синхронизации сервоприводов между собой.
+                  </p>
+                  <p class="capability__mode-text">
+                    Для коррекции соответствия количества управляющих импульсов и&nbsp;разрешения энкодера возможно применение функции электронной редукции. В&nbsp;случае значения электронной редукции 1/1 количество управляющих импульсов для выполнения одного оборота соответствует разрешению энкодера серводвигателя. При необходимости это соотношение можно изменить, задав новое значение (числитель и&nbsp;знаменатель коэффициента электронной редукции вводятся отдельно).
+                  </p>
+                  <ul class="capability__mode-links">
+                    <li><a class="capability__mode-link" href="/funcs-elreducer.htm">Подробнее об функции электронной редукции</a></li>
+                    <li><a class="capability__mode-link" href="/pulse-position-control.htm">Подробнее об импульсном задании положения</a></li>
+                  </ul>
+                </div>
+
+                <div class="capability__mode-item">
+                  <h4 class="capability__sign">
+                    Задание параметров перемещения и точек остановки через таблицу параметров
+                  </h4>
+                  <p class="capability__mode-text">
+                    Сервоприводы поддерживают режим внутреннего управления положением, при котором задание параметров перемещения и точек остановки осуществляется через таблицу параметров.
+                  </p>
+                  <p class="capability__mode-text">
+                    Данный режим управления позволяет создавать несколько отдельных отрезков движения, с независимыми параметрами, максимальное количество таких отрезков 16. Для каждого отрезка перемещения задаются значения скорости, ускорения, величины перемещения (или координата), время задержки выполнения. Отрезки перемещения создают последовательность, которая может выполняться однократно или циклично.
+                  </p>
+
+                  <a class="capability__mode-link" href="/internal-position-control.htm">Подробнее о внутреннем задании положения</a>
+                </div>
+              </div>
+              <div class="capability__mode-container">
+                <div class="capability__mode-item">
+                  <h3 class="capability__subtitle">
+                    Управление скоростью
+                  </h3>
+                  <p class="capability__mode-text">
+                    <span>Поддержание заданной скорости</span> - сервопривод используется в&nbsp;режиме управления скоростью для непрерывного движения нагрузки. Основная задача сервопривода&nbsp;&mdash; стабилизация частоты вращения нагрузки в&nbsp;соответствии с&nbsp;заданием. Целевая скорость вращения сервопривода указывается одним из&nbsp;поддерживаемых им&nbsp;методов.
+                  </p>
+                </div>
+                <div class="capability__mode-item">
+                  <h4 class="capability__sign">
+                    Методы задания скорости:
+                  </h4>
+                  <ul class="capability__mode-sublist">
+                    <li><a href="/internal-speed-control.htm">Установка скорости вращения параметрами, переключение между заданными значениями скоростей дискретными сигналами</a></li>
+                    <li><a href="/analog-speed-control.htm">Аналоговый сигнал -10В...+10В</a></li>
+                    <li>CANOpen</li>
+                    <li>EtherCat</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="capability__mode-container">
+                <div class="capability__mode-item">
+                  <h3 class="capability__subtitle">
+                    Управление моментом
+                  </h3>
+                  <p class="capability__mode-text">
+                    <span>Поддержание заданного момента</span> - сервопривод используется в&nbsp;режиме управления моментом для создания целевого усилия на&nbsp;валу серводвигателя. Основная задача сервопривода&nbsp;&mdash; обеспечить на&nbsp;валу момент, заданный одним из&nbsp;поддерживаемых методов.
+                  </p>
+                </div>
+                <div class="capability__mode-item">
+                  <h4 class="capability__sign">
+                    Методы задания момента:
+                  </h4>
+                  <ul class="capability__mode-sublist">
+                    <li>Задание целевого момента аналоговым сигналом -10В...+10В</li>
+                    <li>Ограничение момента параметрами</li>
+                    <li>Переключение величин ограничения момента внешними дискретными сигналами</li>
+                  </ul>
+                  <p class="capability__mode-text">
+                    При решении задачи управления моментом сервопривод начинает вращение, скорость которого лимитируется за&nbsp;счет момента сопротивления нагрузки. В&nbsp;случае, если момент сопротивления нагрузки меньше, чем заданная выходная величина крутящего момента, скорость сервопривода может повыситься до&nbsp;значения, опасного для безопасной работы оборудования. Для предотвращения повреждения системы используется функция ограничения скорости при управлении моментом. Такми образом, сервопривод увеличивает скорость вращения до&nbsp;тех пор, пока либо не&nbsp;достигнет заданной величины выходного крутящего момента, либо не&nbsp;достигнет предела разрешенной скорости (ограничение скорости). Если дальнейшее вращение невозможно при заданном целевом значении момента, движение останавливается, сервопривод генерирует усилие на&nbsp;валу в&nbsp;остановленном состоянии.
+                  </p>
+                  <a class="capability__mode-link" href="/analog-torque-control.htm">Подробнее о режиме аналогового управления моментом</a>
+
+                </div>
+                <div class="capability__mode-item">
+                  <h4 class="capability__sign">
+                    Ограничение крутящего момента
+                  </h4>
+                  <p class="capability__mode-text">
+                    Во&nbsp;всех поставляемых сервоприводах есть функция задания значения ограничения выходного крутящего момента. Если достижение заданного положения или заданной скорости невозможно при заданной величине ограничения момента, движение останавливается. Если внешнее ограничение момента не&nbsp;задано, сервопривод использует для выполнения задачи всю доступную для данного исполнения серводвигателя мощность. При необходимости сервопривод превышает номинальный крутящий момент для достижения требуемого положения или скорости, входя в&nbsp;режим перегрузки. Все поставляемые сервоприводы допускают троекратную перегрузку, ограниченную по&nbsp;времени.
+                  </p>
+                  <a class="capability__mode-link" href="/analog-torque-control.htm#torque-limit">Подробнее об ограничении выходного момента</a>
+                </div>
+              </div>
+
+
+            </div>
+            <div class="capability__extra capability__content" id="content-2" data-tab="2">
+              <h2 class="capability__title">Дополнительные функции</h2>
+              <p class="capability__extra-text capability__mode-text">
+                Сервоприводы серии SERVO-EP имеют ряд вспомогательных функций и&nbsp;дополнительных возможностей, которые обеспечивают быструю настройку и&nbsp;легкую интеграцию привода в&nbsp;промышленные системы.
+              </p>
+              <p class="capability__extra-text capability__mode-text ">Вспомогательные функции могут использоваться как в&nbsp;режиме пусконаладки для подбора оптимальных настроек работы привода или контроля рабочих параметров, так и&nbsp;для промежуточного мониторинга в&nbsp;режиме штатной работы системы. Дополнительные возможности расширяют функционал стандартных режимов управления, позволяя исключить из&nbsp;системы лишние элементы и&nbsp;упростить логику работы управляющего контроллера.</p>
+
+              <p class="capability__extra-comment">
+                Для облегчения настройки и контроля параметров системы используются:
+              </p>
+              <ul class="capability__extra-list">
+                <li class="capability__extra-item">
+                  <a class="capability__extra-item--link" href="/funcs-jog.htm">
+                  <h3 class="capability__extra-item--title">
+                    JOG – тестовый запуск сервопривода, режим ручного управления
+                  </h3>
+                  <p class="capability__extra-item--text">
+                    Режим JOG предназначен для тестовых запусков и&nbsp;проверки правильности настройки контуров обратной связи.
+                  </p>
+                  <button class="capability__extra-item--btn" href="/funcs-jog.htm">Узнать больше</button>
+                </a>
+                </li>
+
+                <li class="capability__extra-item">
+                  <a class="capability__extra-item--link" href="/funcs-adjustment-signal.htm">
+                  <h3 class="capability__extra-item--title">
+                    Автоматическая или ручная корректировка аналоговых управляющих сигналов
+                  </h3>
+                  <p class="capability__extra-item--text">
+                    При использовании функции автоматической корректировки смещения аналогового управляющего сигнала блок измеряет величину смещения и&nbsp;корректирует данные сигнала. Регулировка производится для аналоговых сигналов управления скоростью и&nbsp;моментом.
+                  </p>
+                  <button class="capability__extra-item--btn" href="/funcs-adjustment-signal.htm">Узнать больше</button>
+                </a>
+                </li>
+
+                <li class="capability__extra-item">
+                  <a class="capability__extra-item--link" href="/funcs-monitor.htm">
+                  <h3 class="capability__extra-item--title">
+                    Режим монитора - контроль состояния сервопривода
+                  </h3>
+                  <p class="capability__extra-item--text">
+                    Сервоприводы имеют режим мониторинга, в&nbsp;котором предоставляется возможность отображать на&nbsp;дисплее текущую и&nbsp;заданную скорость, текущий и&nbsp;заданный момент, состояние входных и&nbsp;выходных сигналов, текущее положение (по&nbsp;энкодеру), текущую ошибку позиционирования, сигналы от&nbsp;датчика обратной связи.
+                  </p>
+                  <button class="capability__extra-item--btn" href="/funcs-monitor.htm">Узнать больше</button>
+                </a>
+                </li>
+
+                <li class="capability__extra-item">
+                  <a class="capability__extra-item--link" href="/funcs-defining-moment-inertia.htm">
+                  <h3 class="capability__extra-item--title">
+                    Автоматическая регулировка и&nbsp;определение момента инерции нагрузки
+                  </h3>
+                  <p class="capability__extra-item--text">
+                    Функция автоматической настройки рассчитывает момент инерции нагрузки при работе сервопривода и&nbsp;задает параметры таким образом, чтобы обеспечить изменение коэффициентов контуров обратной связи сервопривода в&nbsp;соответствии с&nbsp;жесткостью системы.
+                  </p>
+                  <button class="capability__extra-item--btn" href="/funcs-defining-moment-inertia.htm">Узнать больше</button>
+                </a>
+                </li>
+
+                <li class="capability__extra-item">
+                  <a class="capability__extra-item--link" href="/funcs-history-of-errors.htm">
+                  <h3 class="capability__extra-item--title">
+                    Отображение истории ошибок и аварийных ситуаций
+                  </h3>
+                  <p class="capability__extra-item--text">
+                    Сервоприводы SERVO-EP фиксируют возникающие ошибки и&nbsp;аварийные состояния и&nbsp;предоставляют возможность просматривать 10&nbsp;последних аварийных ситуаций. Информация позволяет более эффективно осуществить настройку сервопривода и&nbsp;детектировать причины возможных возникающих неисправностей по&nbsp;коду ошибки.
+                  </p>
+                  <button class="capability__extra-item--btn" href="/funcs-history-of-errors.htm">Узнать больше</button>
+                </a>
+                </li>
+
+                <li class="capability__extra-item">
+                  <a class="capability__extra-item--link" href="/funcs-program.htm">
+                  <h3 class="capability__extra-item--title">
+                    Готовое программное обеспечение
+                  </h3>
+                  <p class="capability__extra-item--text">
+                    Программное обеспечение для работы с&nbsp;сервоприводами предоставляется бесплатно. Связь сервоприводов с&nbsp;компьютером для параметризации и&nbsp;настройки осуществляется по&nbsp;RS-485. При необходимости можно заказать готовый кабель с&nbsp;преобразователем интерфейса RS-485/USB для подключения привода к&nbsp;ПК.
+                  </p>
+                  <button class="capability__extra-item--btn" href="/funcs-program.htm">Узнать больше</button>
+                </a>
+                </li>
+
+              </ul>
+
+              <p class="capability__extra-comment">
+                Для расширения возможностей стандартных режимов управления в&nbsp;сервоприводах предусмотрены:
+              </p>
+              <ul class="capability__extra-list">
+                <a class="capability__extra-item--link" href="/funcs-homing.htm">
+                <li class="capability__extra-item">
+                  <h3 class="capability__extra-item--title">
+                    Функция поиска начального положения
+                  </h3>
+                  <p class="capability__extra-item--text">
+                    Сервопривод обеспечивает возможность настройки направления и&nbsp;скорости поиска нулевой точки по&nbsp;датчику (концевому выключателю), а&nbsp;также по&nbsp;метке C&nbsp;энкодера.
+                  </p>
+                  <button class="capability__extra-item--btn" href="/funcs-homing.htm">Узнать больше</button>
+                </a>
+                </li>
+
+                <li class="capability__extra-item">
+                  <a class="capability__extra-item--link" href="/funcs-limiting-movement.htm">
+                  <h3 class="capability__extra-item--title">
+                    Установка ограничения перемещения
+                  </h3>
+                  <p class="capability__extra-item--text">
+                    Если существуют механическое ограничение перемещения, то&nbsp;использование этой функции позволит предотвратить выход системы за&nbsp;пределы установленных границ. Датчики на&nbsp;ограничение перемещения подключаются ко&nbsp;входам блока управления (отдельные входы ля&nbsp;ограничения движения в&nbsp;прямом и&nbsp;реверсном направлениях).
+                  </p>
+                  <button class="capability__extra-item--btn" href="/funcs-limiting-movement.htm">Узнать больше</button>
+                </a>
+                </li>
+
+                <li class="capability__extra-item">
+                  <a class="capability__extra-item--link" href="/funcs-elreducer.htm">
+                  <h3 class="capability__extra-item--title">
+                    Электронная редукция
+                  </h3>
+                  <p class="capability__extra-item--text">
+                    Электронная редукция используется для&nbsp;назначения коэффициента масштабирования, т.е. указания величины перемещения, соответствующей одному управляющему сигналу при&nbsp;импульсном управлении положением.
+                  </p>
+                  <button class="capability__extra-item--btn" href="/funcs-elreducer.htm">Узнать больше</button>
+                  </a>
+                </li>
+
+                <li class="capability__extra-item">
+                  <a class="capability__extra-item--link" href="/funcs-block-signal.htm">
+                  <h3 class="capability__extra-item--title">
+                    Блокировка сигналов управления положением
+                  </h3>
+                  <p class="capability__extra-item--text">
+                    Эту функцию можно использовать, например, при необходимости остановить двигатель, не&nbsp;прекращая следование управляющих импульсных сигналов с&nbsp;внешнего управляющего контроллера.
+                  </p>
+                  <button class="capability__extra-item--btn" href="/funcs-block-signal.htm">Узнать больше</button>
+                  </a>
+                </li>
+
+                <li class="capability__extra-item">
+                  <a class="capability__extra-item--link" href="/funcs-clap.htm">
+                  <h3 class="capability__extra-item--title">
+                    Функция фиксации при аналоговом управлении скоростью
+                  </h3>
+                  <p class="capability__extra-item--text">
+                    Данная функция при внешнем аналоговом управлении скоростью позволяет осуществить фиксацию вала двигателя по&nbsp;внешнему дискретному сигналу.
+                  </p>
+                  <button class="capability__extra-item--btn" href="/funcs-clap.htm">Узнать больше</button>
+                  </a>
+                </li>
+
+                <li class="capability__extra-item">
+                  <a class="capability__extra-item--link" href="/funcs-brake.htm">
+                  <h3 class="capability__extra-item--title">
+                    Функция управления стояночным тормозом
+                  </h3>
+                  <p class="capability__extra-item--text">
+                    Стояночный тормоз двигателя применяется при вертикальном расположении нагрузки или при наличии иных внешних сил, кроме силы тяжести, под воздействием которых возможно нежелательное перемещение нагрузки во&nbsp;время стоянки (при выключенном питании привода).
+                  </p>
+                  <button class="capability__extra-item--btn" href="/funcs-brake.htm">Узнать больше</button>
+                  </a>
+                </li>
+
+                <li class="capability__extra-item">
+                  <a class="capability__extra-item--link" href="/funcs-brake-resistor.htm">
+                  <h3 class="capability__extra-item--title">
+                    Использование тормозного резистора
+                  </h3>
+                  <p class="capability__extra-item--text">
+                    Сервопривод позволяет использование внутреннего и внешнего тормозного резистора.
+                  </p>
+                  <button class="capability__extra-item--btn" href="/funcs-brake-resistor.htm">Узнать больше</button>
+                  </a>
+                </li>
+
+                <li class="capability__extra-item">
+                  <a class="capability__extra-item--link" href="/funcs-db.htm">
+                  <h3 class="capability__extra-item--title">
+                    Функция динамического торможения
+                  </h3>
+                  <p class="capability__extra-item--text">
+                    один из&nbsp;основных способов осуществления резкого торможения двигателя. Торможение двигателя осуществляется за&nbsp;счет замыкания электрической тормозной цепи, встроенной в&nbsp;двигатель.
+                  </p>
+                  <button class="capability__extra-item--btn" href="/funcs-db.htm">Узнать больше</button>
+                  </a>
+                </li>
+
+                <li class="capability__extra-item">
+                  <a class="capability__extra-item--link" href="/funcs-soft-start-stop.htm">
+                  <h3 class="capability__extra-item--title">
+                    Плавный пуск и остановка
+                  </h3>
+                  <p class="capability__extra-item--text">
+                    Функция плавного пуска преобразует внутри сервопривода ступенчатое задание скорости в&nbsp;заданное уровень ускорения или замедления.
+                  </p>
+                  <button class="capability__extra-item--btn" href="/funcs-soft-start-stop.htm">Узнать больше</button>
+                  </a>
+                </li>
+
+                <li class="capability__extra-item">
+                  <a class="capability__extra-item--link" href="/funcs-external-signals.htm">
+                  <h3 class="capability__extra-item--title">
+                    Возможность управления внешними сигналами через коммуникационный интерфейс
+                  </h3>
+                  <p class="capability__extra-item--text">
+                    В случаях невозможности использовать физические внешние сигналы, сервоприводы SERVO-E позволяют управлять каждым из сигналов через коммуникационный интерфейс. Управление сигналами производится считыванием и записью определенного адреса памяти блока управления. Для каждого из сигналов назначается способ управления - физически через внешний контакт или программно через интерфейс обмена.
+                  </p>
+                  <button class="capability__extra-item--btn" href="/funcs-external-signals.htm">Узнать больше</button>
+                  </a>
+                </li>
+
+                <li class="capability__extra-item">
+                  <a class="capability__extra-item--link" href="/funcs-oscillation.htm">
+                  <h3 class="capability__extra-item--title">
+                    Функция подавления низкочастотных колебаний нагрузки
+                  </h3>
+                  <p class="capability__extra-item--text">
+                    Для нагрузки с&nbsp;низкой жесткостью низкочастотная вибрация будет постоянно возникать во&nbsp;время быстрого ускорения или замедления. Вибрация может замедлить время позиционирования и&nbsp;повлиять на&nbsp;эффективность работы системы. Функция подавления низкочастотной вибрации встроена в&nbsp;сервоприводы серии SERVO-EP путем расчета положения нагрузки и&nbsp;ее&nbsp;компенсации.
+                  </p>
+                  <button class="capability__extra-item--btn" href="/funcs-oscillation.htm">Узнать больше</button>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+  </div>
+  </main>
+  <?php include "footer.htm"; ?>
+  </div>

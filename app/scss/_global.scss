@@ -1,0 +1,109 @@
+html,
+body {
+	height: 100%;
+	background: $white;
+}
+
+body {
+	font-family: 'Open Sans Regular';
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 19px;
+	color: $text;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+.container{
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+	position: relative;
+}
+	.visually-hidden {
+		opacity: 0;
+		width: 1px;
+		height: 1px;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+	}
+.card {
+	&__feature {
+		width: 100%;
+		display: table;
+		table-layout: auto;
+		padding-bottom: 6px;
+	}
+
+	&__feature-left {
+		display: table-cell;
+		width: max-content;
+		float: left;
+	}
+
+	&__feature-right {
+		display: table-cell;
+		width: max-content;
+		float: right;
+		text-align: end;
+	}
+
+	&__feature-separator {
+		background-image: linear-gradient(to right, #8a8a8a 33%, rgba(255, 255, 255, 0) 0%);
+		background-position: bottom;
+		background-size: 8px 1px;
+		background-repeat: repeat-x;
+		display: table-cell;
+		width: inherit;
+		min-width: 20px;
+	}
+}
+
+.special__title {
+	font-family: 'Tahoma';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 123.7%;
+	color: $main-light;
+	margin-bottom: 24px;
+	width: fit-content;
+}
+
+@media screen and(max-width: 1170px) {
+	.container {
+		padding: 0 30px;
+	}
+	.special__title {
+		font-size: 26px;
+		line-height: 130%;
+		margin-bottom: 18px;
+	}
+}
+
+@media screen and(max-width: 767px) {
+	.container {
+		padding: 0 15px;
+	}
+	.special__title {
+		font-size: 18px;
+		line-height: 130%;
+		display: inline;
+	}
+}
+
+
+

@@ -1,0 +1,288 @@
+.servodrive {
+  margin: 20px 0 74px;
+  &__container {
+    max-width: 780px;
+  }
+
+  &__comment {
+    
+  }
+  &__comment p{
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 8px;
+    
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 76px;
+  }
+  &__card-pic {
+    width: 25%;
+  }
+  &__link {
+    top: -60px;
+    left: 0;
+    right:auto;
+    width: fit-content;
+  }
+  &__cards {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 72px;
+
+  }
+  &__card {
+    width: 48%;
+    border: 1px solid #D8DBE2;
+    border-radius: 20px;
+    padding: 40px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+
+  }
+  &__card-title {
+    @include main-title;
+    font-size: 20px;
+    line-height: 24px;
+    color: $main;
+    margin-bottom: 52px;
+    text-align: center;
+  }
+  &__card-text {
+    margin-bottom: 16px;
+  }
+  &__card-feature .card__feature-left {
+    color: $grey;
+  }
+  &__card-features {
+    margin-bottom: auto;
+  }
+  &__card-btn {
+    margin: 0 auto;
+    display: block;
+    width:max-content;
+    margin-top: 15px;
+    @include main-title;
+    font-size: 16px;
+    line-height: 120%;
+    color: $main;
+    padding: 12px 38px;
+    background: $grey-light;
+    border: 1px dashed transparent;
+  }
+  &__card-btn:hover {
+    border: 1px dashed #102542;
+    transform: scale(1.05);
+  }
+  &__records-item {
+    margin-bottom: 32px;
+  }
+  &__records-title {
+    @include main-title;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 32px;
+    padding-left: 12px;
+    position: relative;
+  }
+  &__records-title::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: #d1352f;
+    left: 0;
+    bottom: 0;
+  }
+  &__records-subtitle {
+    @include main-title;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+  &__records-comment {
+    font-size: 16px;
+    line-height: 22px
+  }
+  &__records-list {
+    margin: 8px 0;
+    list-style: disc !important;
+    list-style-position: inside !important;
+
+  }
+  &__records-list li {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 4px;
+  }
+  &__records-link {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 19px;
+    position: relative;
+    padding-right: 20px;
+    color: $main;
+  }
+  &__records-link::after {
+    content: url(../images/svg/info__arrow.svg);
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 0;
+    top: 0;
+  }
+  &__records-link:hover {
+    padding-right: 25px;
+  }
+  &__records-text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  
+
+}
+@media screen and(max-width:1170px) {
+  .servodrive {
+    &__top {
+      flex-direction: row;
+      gap: 36px;
+      width: 100%;
+    }
+    &__title {
+      order: 1;
+      width: auto;
+      margin-bottom: 16px;
+      
+    }
+    &__pic {
+      order: 2;
+      width: auto;
+    }
+    &__comment {
+      order: 3;
+      width: auto;
+      max-width: 470px;
+      margin: 0;
+    }
+    &__comment p {
+      font-size: 14px;
+      line-height: 19px;
+    }
+    &__cards {
+      gap: 18px;
+      margin-bottom: 32px;
+    }
+    &__card {
+      padding: 30px;
+    }
+    &__card-title {
+      margin-bottom: 24px;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: left;
+
+    }
+    &__card-text {
+      font-size: 14px;
+      line-height: 19px;
+    }
+    &__card-btn {
+      margin-top: 24px;
+    }
+  }
+}
+@media screen and(max-width:767px) {
+  .servodrive {
+    margin-top: 62px;
+   &__top {
+     max-height: none;
+     flex-direction: column;
+     align-items: center;
+     margin-bottom: 32px;
+     gap: 0;
+   }
+   &__title {
+    font-size: 18px;
+    line-height: 123.7%;
+    width: 100%;
+    max-width: none;
+    margin-bottom: 16px;
+    }
+  &__pic {
+    order: -1;
+    margin-bottom: 16px;
+  }
+  &__comment p {
+    font-size: 12px;
+    line-height: 140%;
+    }
+  &__link {
+    top: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &__card {
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0px 4px 19px rgba(171, 180, 215, 0.25);
+  }
+  &__card-title {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  &__card-text {
+    font-size: 12px;
+    line-height: 140%;
+  }
+  &__card-feature  {
+    font-size: 12px;
+    line-height: 140%;
+    }
+  &__card-btn {
+    margin-top: 16px;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+    }
+  &__records-item {
+    margin-bottom: 24px;
+  }
+  &__records-title {
+    font-size: 16px;
+    line-height: 123.7%;
+    margin-bottom: 24px;   
+  }
+  &__records-subtitle {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 8px;
+    }
+  &__records-comment,
+  &__records-list li {
+    font-size: 12px;
+    line-height: 140%;
+  }
+  &__records-link {
+    font-size: 12px;
+    line-height: 140%;
+    padding: 0;
+    padding-left: 24px;
+  }
+  &__records-link::after {
+    left: 0;
+  }
+  &__records-text {
+    font-size: 12px;
+    line-height: 140%;
+    }
+  }
+}

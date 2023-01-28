@@ -1,0 +1,70 @@
+User-agent: *
+Disallow: /sites.php/
+Disallow: /index.htm
+Disallow: /price.htm
+Disallow: /filter.htm
+Disallow: /search.htm
+Disallow: *?type=
+Disallow: *?added=
+Disallow: *?block=
+Disallow: *?utm_source=
+Disallow: *?utm_medium=
+Disallow: *?utm_campaign=
+Disallow: *?utm_content=
+Disallow: *?utm_term=
+Disallow: *?pos=
+Disallow: *?device=
+Disallow: *?etext=
+Disallow: *?yadclid=
+Disallow: *?yadordid=
+Disallow: *?hhtmFrom=
+Disallow: *&type=
+Disallow: *&added=
+Disallow: *&block=
+Disallow: *&utm_source=
+Disallow: *&utm_medium=
+Disallow: *&utm_campaign=
+Disallow: *&utm_content=
+Disallow: *&utm_term=
+Disallow: *&pos=
+Disallow: *&device=
+Disallow: *&etext=
+Disallow: *&yadclid=
+Disallow: *&yadordid=
+Disallow: *&hhtmFrom=
+
+User-Agent: Yandex
+Disallow: /sites.php/
+Disallow: /index.htm
+Disallow: /price.htm
+Disallow: /filter.htm
+Disallow: /search.htm
+Clean-param: type /*
+Clean-param: added /*
+Clean-param: block /*
+Clean-param: utm_source /*
+Clean-param: utm_medium /*
+Clean-param: utm_campaign /*
+Clean-param: utm_content /*
+Clean-param: utm_term /*
+Clean-param: pos /*
+Clean-param: device /*
+Clean-param: yadclid /*
+Clean-param: yadordid /*
+Clean-param: etext /*
+Clean-param: hhtmFrom /*
+Clean-param: type /*
+Clean-param: added /*
+Clean-param: block /*
+Clean-param: utm_source /*
+Clean-param: utm_medium /*
+Clean-param: utm_campaign /*
+Clean-param: utm_content /*
+Clean-param: utm_term /*
+Clean-param: pos /*
+Clean-param: device /*
+Clean-param: yadclid /*
+Clean-param: yadordid /*
+Clean-param: etext /*
+Host: https://dmotor.ru
+sitemap: https://dmotor.ru/sitemap.xml

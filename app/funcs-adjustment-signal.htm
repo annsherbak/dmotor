@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Автоматическая или ручная корректировка аналоговых управляющих сигналов</title>
+  <meta name="description" content="Автоматическая или ручная корректировка аналоговых управляющих сигналов. Купить сервопривод.">
+
+    <?php include "header.htm"; ?>
+    <main class="main" id="category__capability">
+      <section class="breadcrumbs">
+        <div class="container">
+          <? include "php/breadcrumbs.php"; ?>
+        </div>
+      </section>
+      <section class="control-methods">
+        <div class="control-methods__container">
+          <h1 class="control-methods__title">
+            Автоматическая или ручная корректировка аналоговых управляющих сигналов
+          </h1>
+          <p class="control-methods__text">
+            Возможна ситуация, когда двигатель осуществляет медленное вращение при установленном уровне управляющего аналогового сигнала 0В. Это происходит вследствие того, что управляющий контроллер или внешняя цепь управления имеет небольшое напряжение смещения, измеряемое в милливольтах, – установившаяся погрешность аналогового сигнала.
+          </p>
+          <p class="control-methods__text">Блок управления имеет возможность автоматически измерять это смещение и корректировать данные на входе аналогового управляющего сигнала в соответствии с этим смещением.</p>
+          <p class="control-methods__text">При использовании функции автоматической корректировки смещения аналогового управляющего сигнала блок измеряет величину смещения и корректирует данные сигнала. Регулировка производится для аналоговых сигналов управления скоростью и моментом.</p>
+          <p class="control-methods__text">Величина измеренного смещения и необходимая корректировка сохраняется в памяти сервопривода.</p>
+            <figure class="control-methods__pics">
+              <div class="control-methods__pics-container">
+                 <img src="images/capability/funcs-adjustment-signal-1.png" alt="Зависимость скорости или момента от уровня сигнала. БЕЗ корректировки смещения">
+                <img src="images/capability/funcs-adjustment-signal-2.png" alt="Зависимость скорости или момента от уровня сигнала. с автоматической корректировкой смещения">
+              </div>
+              <figcaption>Зависимость скорости или момента от уровня сигнала. <br> Слева - БЕЗ корректировки смещения; Справа - с автоматической корректировкой смещения</figcaption>
+            </figure>
+          <p class="control-methods__text">Если необходимо преднамеренное изменение величины смещения на определенное значение, то Сервопривод позволяет выполнить ручную корректировку смещения аналогового сигнала.</p>
+        </div>
+      </section>
+    </main>
+
+    <?php include "footer.htm"; ?>
+  </div>

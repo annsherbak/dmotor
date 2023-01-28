@@ -1,0 +1,967 @@
+  .intro {
+    &__background {
+      position: relative;
+      max-width: 1330px;
+      margin: 95px auto 52px;
+      padding: 85px 130px 95px 110px;
+      background: $grey-light;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__text-title {
+      @include main-title;
+      font-size: 30px;
+      line-height: 123.7%;
+      max-width: 635px;
+      margin-bottom: 24px;
+    }
+    &__text-title span {
+      color: $accent;
+      
+    }
+    &__text-desc{
+      font-size: 14px;
+      line-height: 19px;
+      max-width: 370px;
+      margin-bottom: 24px;
+    }
+    &__text-btn {
+      display: block;
+      width: 270px;
+      @include main-title;
+      font-size: 16px;
+      line-height: 123.7%;
+      color: #FFFFFF;
+      padding: 14px 42px;
+      background: $accent;
+      border-radius: 4px;
+      position: relative;
+    }
+    &__text-btn--mobil {
+      display: none;
+    }
+    &__text-btn::after {
+      display: none;
+        content: '';
+        width: 40px;
+        height: 25px;
+        background-image: url(../images/svg/promo__button-arrow.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 10px;
+        top: 60%;
+        transform: translateY(-50%);
+    }
+    &__text-btn:hover {
+      padding-left: 25px;
+      transition: all .8s ease;
+    }
+    &__text-btn:hover::after {
+      display: block;
+    }
+    &__pic {
+      z-index: 3;
+    }
+    &__bg {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      z-index: 2;
+    }
+  }
+.specifications {
+  margin-bottom: 55px;
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  &__card {
+    padding: 30px 25px;
+    border: none;
+    width: fit-content;
+    background: #F8F8FA;
+    border-radius: 5px;
+  }
+  &__card-title {
+    @include main-title;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    color: $main-light;
+  }
+  &__card-feature {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  &__card-feature .card__feature-left {
+    color: $grey;
+  }
+  &__card-feature .card__feature-separator {
+    min-width: 26px;
+  }
+  &__card-list li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 22px;
+    width: max-content;
+  }
+  &__card-list li:last-child {
+    margin: 0;
+  }
+  &__card-list li::after {
+    position: absolute;
+    content: '✔';
+    width: 11px;
+    height: 8px;
+    left: 0;
+  }
+  &__card-list span {
+    color: $grey;
+  }
+}
+.supply {
+  margin-bottom: 52px;
+  &__link {
+    position: absolute;
+    display: flex;
+    right: 15px;
+    top: 0;
+    padding: 8px;
+    font-size: 16px;
+    line-height: 22px;
+    color: $main;
+    background: linear-gradient(318.23deg, #FFFFFF 10.86%, #F0F4FC 75.26%);
+    box-shadow: 5px 5px 10px rgba(209, 212, 217, 0.36);
+    border-radius: 5px;
+
+  }
+  &__link:hover,
+  &__link:focus {
+    transition: all 0.3s ease;
+    background: linear-gradient(24.23deg, #FFFFFF 10.86%, #F0F4FC 75.26%);
+    box-shadow: 5px 5px 10px rgba(209, 212, 217, 0.36);
+  }
+  &__link:active {
+    opacity: 0.6;
+  }
+  &__link::before {
+    content: url(../images/svg/sort.svg);
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+  }
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  &__card {
+    background: $blue-light;
+    width: 540px;
+    padding: 40px 85px;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+
+  }
+  &__card-title {
+    @include main-title;
+    align-self: center;
+    font-size: 18px;
+    line-height: 123.7%;
+    color: $main;
+    margin-bottom: 24px;
+
+  }
+  &__card-text {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 16px;
+  }
+  &__card-features {
+    margin-bottom: 15px;
+  }
+  &__card-feature {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  &__card-feature .card__feature-left  {
+    color: $grey;
+  }
+  &__card-btn {
+    display: block;
+    @include main-title;
+    background: $grey-light;
+    border: 1px solid $main-light;
+    border-radius: 4px;
+    padding: 12px 55px;
+    width: fit-content;
+    color:$main-light;
+    margin-top: auto;
+    align-self: center;
+    font-size: 16px;
+    line-height: 130%;
+  }
+  &__card-btn:hover {
+    border: 1px dashed $main;
+    transform: scale(1.05);
+
+  }
+}
+  .about {
+    margin-bottom: 52px;
+    &__items {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    &__item {
+      max-width: 540px;
+    }
+    &__desc {
+      font-size: 16px;
+      line-height: 22px;
+      color: $grey;
+      margin-bottom: 24px;
+    }
+    &__list li span {
+      font-weight: 600;
+    }
+    &__list li {
+      font-size: 18px;
+      line-height: 22px;
+      padding-left: 50px;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    &__list li:last-child {
+      margin: 0;
+    }
+    &__list li:nth-child(1)::before {
+      position: absolute;
+      content: url(../images/svg/index__about-person.svg);
+      width: 35px;
+      height: 35px;
+      left: 0;
+    }
+    &__list li:nth-child(2)::before {
+      position: absolute;
+      content: url(../images/svg/index__about-time.svg);
+      width: 35px;
+      height: 35px;
+      left: 0;
+    }
+    &__list li:nth-child(3)::before {
+      position: absolute;
+      content: url(../images/svg/index__about-warranty.svg);
+      width: 35px;
+      height: 35px;
+      left: 0;
+    }
+   } 
+    .benefits {
+      margin-bottom: 52px;
+      &__items {
+        display: flex;
+        gap: 100px;
+      }
+      &__item {
+        max-width: 555px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      &__list li {
+        margin-bottom: 25px;
+        font-size: 16px;
+        line-height: 22px;
+        position: relative;
+        padding-left: 42px;
+      }
+      &__list li:nth-child(1)::before {
+        position: absolute;
+        content: url(../images/svg/benefits-1.svg);
+        width: 32px;
+        height: 32px;
+        left: 0;
+      }
+      &__list li:nth-child(2)::before {
+        position: absolute;
+        content: url(../images/svg/benefits-2.svg);
+        width: 32px;
+        height: 32px;
+        left: 0;
+      }
+      &__list li:nth-child(3)::before {
+        position: absolute;
+        content: url(../images/svg/benefits-3.svg);
+        width: 32px;
+        height: 32px;
+        left: 0;
+      }
+      &__list li:nth-child(4)::before {
+        position: absolute;
+        content: url(../images/svg/benefits-4.svg);
+        width: 32px;
+        height: 32px;
+        left: 0;
+      }
+      &__list li:nth-child(5)::before {
+        position: absolute;
+        content: url(../images/svg/benefits-5.svg);
+        width: 32px;
+        height: 32px;
+        left: 0;
+      }
+      &__list span {
+        font-weight: 600;
+      }
+      &__list a {
+        color: $text;
+        text-decoration: underline;
+      }
+      &__list li:last-child {
+        margin-bottom: 0;
+      }
+    }
+    
+
+.application {
+  margin-bottom: 52px;
+  &__container {
+    background: #F8F8FA;
+    border-radius: 5px;
+    max-width: 1270px;
+    padding: 50px 110px;
+    margin: 0 auto;
+  }
+  &__items {
+    display: flex;
+    gap: 108px;
+  }
+  &__item {
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__desc {
+    font-size: 16px;
+    line-height: 20px;
+    color: $grey;
+    margin-bottom: 25px;
+  }
+  &__title {
+    @include main-title;
+    font-size: 30px;
+    line-height: 120%;
+    margin-bottom: 15px;
+    color: $main-light;
+  } 
+  &__text {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__subtitle {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 26px;
+    margin-bottom: 15px;
+    color: $main-light;
+  }
+  &__list li {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 8px;
+    padding-left: 24px;
+    position: relative;
+  }
+  &__list li::before {
+    content: url(../images/svg/index__application-check.svg);
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    left: 0;
+  }
+  &__list li:last-child {
+    margin-bottom: 0;
+  }
+}
+.info {
+  margin-bottom: 52px;
+  &__container {
+    background: $grey-light;
+    max-width: 1270px;
+    padding: 55px 110px;
+    margin: 0 auto;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  &__item {
+    gap: 30px;
+  }
+  &__title {
+    @include main-title;
+    font-size: 30px;
+    line-height: 123.7%;
+    margin-bottom: 10px;
+    color: $main-light;
+  }
+  &__comment {
+    font-family: 'Tahoma';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $grey;
+    margin-bottom: 24px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  &__list span {
+    font-family: 'Tahoma';
+    font-style: normal;
+    font-weight: 400;
+    color: $main-light;
+    font-weight: 600;
+    
+  }
+  &__list li {
+    width: 49%;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  &__subtitle {
+    font-family: 'Tahoma';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: $main-light;
+    margin-bottom: 10px;
+  }
+  &__list-link {
+    display: inline-block;
+    font-family: 'Tahoma';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: $main-light;
+    padding-right: 25px;
+    margin-bottom: 5px;
+    position: relative;
+  }
+  &__list-link::after {
+    content: url(../images/svg/info__arrow.svg);
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__list-link:hover {
+    padding-right: 30px;
+  }
+  &__roster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  &__roster li {
+    width: 49%;
+  }
+  &__sublist li {
+    width: 100%;
+    position: relative;
+    padding-left: 24px;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 6px;
+
+  }
+
+  &__sublist li::before {
+    content: url(../images/svg/index__application-check.svg);
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    left: 0;
+  }
+  
+}
+
+@media screen and(max-width: 1170px) {
+  .intro {
+    &__background {
+      margin: 85px 30px 40px;
+      padding: 30px 40px;
+
+    }
+    &__text-title {
+      font-size: 26px;
+      line-height: 127%;
+      margin-bottom: 15px;
+    }
+    &__bg {
+      top: auto;
+      bottom: 50px;
+      right: 25px;
+    }
+    &__pic {
+      position: absolute;
+      top: auto;
+      right: 70px;
+      bottom: 60px;
+    }
+    &__pic img {
+      width: 100%;
+    }
+    &__text-btn {
+      width: 253px;
+      padding: 12px 38px;
+      text-align: center;
+    }
+  }
+  
+  .specifications {
+    margin-bottom:45px;
+    &__cards {
+      flex-wrap: wrap;
+    }
+    &__card {
+      padding: 20px;
+    }
+    &__card-feature {
+      font-size: 14px;
+      line-height: 19px;
+    }
+    &__card-title {
+      font-size: 19px;
+      line-height: 26px;
+      margin-bottom: 16px;
+    }
+    &__card-list li {
+      font-size: 14px;
+      line-height: 19px;
+    }
+    &__card-characteristics {
+      order: 1;
+      width: 48%;
+    }
+    &__card-interfaces {
+      order: 2;
+      width: 48%;
+    }
+    &__card-feedback {
+      order: 3;
+      width: 100%;
+    }
+  }
+  .supply {
+    margin-bottom: 45px;
+    &__link {
+      right: 30px;
+    }
+    &__cards {
+      gap: 15px;
+      justify-content: center;
+    }
+    &__card {
+      padding: 30px;
+      width: 48%;
+    }
+    &__card-title {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 24px;
+    }
+    &__card-features {
+      margin: 24px 0;
+    }
+    &__card-btn {
+      margin-top: 0;
+    }
+    &__card-text {
+      margin-bottom: auto;
+    }
+  }
+  .about {
+    margin-bottom: 56px;
+    &__item {
+      width: 48%;
+    }
+    &__pic {
+      max-width: none;
+    }
+    &__desc {
+      font-size: 14px;
+      line-height: 19px;
+      font-weight: 500;
+    }
+    &__list li {
+      font-size: 14px;
+      line-height: 19px;
+      padding-left: 32px;
+    }
+    &__list li:nth-child(1)::before {
+      content: url(../images/svg/index__about-person--mobil.svg);
+      width: 24px;
+      height: 2px;
+    }
+    &__list li:nth-child(2)::before {
+      content: url(../images/svg/index__about-time--mobil.svg);
+      width: 24px;
+      height: 2px;
+    }
+    &__list li:nth-child(3)::before {
+      content: url(../images/svg/index__about-warranty--mobil.svg);
+      width: 24px;
+      height: 2px;
+    }
+  }
+  .application {
+    margin: 0 30px;
+    margin-bottom: 45px;
+    &__container {
+      padding: 30px 50px;
+    }
+    &__items {
+      gap: 56px;
+    }
+    &__desc {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      min-width: 300px;
+      margin-bottom: 20px;
+
+    }
+    &__title {
+      font-size: 26px;
+      line-height: 130%;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 19px;
+    }
+    &__subtitle {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &__list li {
+      font-size: 14px;
+      margin-bottom: 6px;
+      line-height: 19px;
+    }
+  }
+  .benefits {
+    margin-bottom: 45px;
+    &__items {
+      gap: 40px;
+    }
+    &__list li {
+      padding-left: 30px;
+      font-size: 14px;
+      line-height: 17px;
+      
+    }
+    &__list li:nth-child(1)::before {
+      position: absolute;
+      content: url(../images/svg/benefits-1-mobil.svg);
+      width: 32px;
+      height: 32px;
+      left: 0;
+    }
+    
+    &__list li:nth-child(2)::before {
+      position: absolute;
+      content: url(../images/svg/benefits-2-mobil.svg);
+      width: 24px;
+      height:24px;
+      left: 0;
+    }
+    
+    &__list li:nth-child(3)::before {
+      position: absolute;
+      content: url(../images/svg/benefits-3-mobil.svg);
+      width: 24px;
+      height: 24px;
+      left: 0;
+    }
+    
+    &__list li:nth-child(4)::before {
+      position: absolute;
+      content: url(../images/svg/benefits-4-mobil.svg);
+      width: 24px;
+      height: 24px;
+      left: 0;
+    }
+    
+    &__list li:nth-child(5)::before {
+      position: absolute;
+      content: url(../images/svg/benefits-5-mobil.svg);
+      width: 24px;
+      height: 24px;
+      left: 0;
+    }
+  }
+  .info {
+    margin: 0 30px 40px;
+    &__container {
+      padding: 70px 50px 50px;
+    }
+    &__items {
+      gap: 42px;
+    }
+    &__item {
+      flex-direction: column;
+      gap: 0;
+    }
+    &__title {
+      font-size: 26px;
+      line-height: 130%;
+      width: auto;
+    }
+    &__comment {
+      max-width: none;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &__list {
+      display: block;
+    }
+    &__list li {
+      width: 100%;
+      font-size: 14px;
+      line-height: 19px;
+      margin-bottom: 15px;
+    }
+    &__list li:last-child {
+      margin: 0;
+    }
+    &__subtitle {
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 600;
+    }
+    &__list-link {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    &__roster li {
+      width: 100%;
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}
+@media screen and(max-width: 767px) {
+  .intro {
+    
+    &__background {
+      margin: 63px 15px 40px;
+      padding: 15px;
+      flex-direction: column;
+    }
+    &__text-title {
+      font-size: 18px;
+      line-height: 130%;
+      margin-bottom: 10px;
+    }
+    &__text-desc {
+      font-size: 12px;
+      line-height: 140%;
+      margin-bottom: 40px;
+    }
+    &__pic {
+      position: relative;
+      right: auto;
+      bottom: auto;
+      width: fit-content;
+      align-self: center;
+      margin-bottom: 34px;
+    }
+    &__text-btn--mobil {
+      display: block;
+      align-self: center;
+      text-align: center;
+    }
+    &__text-btn--desktop {
+      display: none;
+    }
+    &__bg {
+      bottom: 85px;
+      left: 0;
+      right: 0;
+      width: fit-content;
+      margin: 0 auto;
+    }
+  }
+  .specifications {
+    margin-bottom: 40px;
+   &__cards {
+     flex-direction: column;
+   }
+   &__card {
+     width: 100%;
+     padding: 15px;
+   }
+   &__card-title {
+    font-size: 16px;
+    line-height: 130%;
+   }
+  &__card-feature {
+    font-size: 12px;
+    line-height: 140%;
+  }
+  &__card-list li {
+    font-size: 12px;
+    line-height: 140%;
+    }
+  }
+  .supply {
+    margin-bottom: 40px;
+    &__link {
+      position:inherit;
+      right: 0;
+      margin-top: 25px;
+    }
+    &__cards {
+     margin-top: 24px; 
+    }
+    &__card {
+      width: 100%;
+      padding: 20px;
+    }
+    &__card-title {
+      font-size: 16px;
+      line-height: 130%;
+      margin-bottom: 16px;
+    }
+    &__card-text {
+      font-size: 12px;
+      margin-bottom: 24px;
+    }
+    &__card-feature {
+      font-size: 11px;
+      line-height: 140%;
+    }
+    &__card-btn {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+  .about {
+    margin-bottom: 40px;
+    &__items {
+      display: flex;
+      flex-direction: column;
+    }
+    &__item {
+      width: 100%;
+    }
+    &__desc {
+      font-size: 12px;
+      line-height: 140%;
+      margin-bottom: 24px;
+    }
+    &__list {
+      margin-top: 18px;
+    }
+    &__list li {
+      font-size: 11px;
+      line-height: 140%;
+    }
+    &__pic {
+      width: 100%;
+    }
+  }
+  .application {
+    margin: 0 15px 40px;
+    &__container {
+      margin: 0;
+      padding: 30px 20px;
+    }
+    &__items {
+      flex-direction: column;
+      gap: 32px;
+    }
+    &__item {
+      width: 100%;
+    }
+    &__desc {
+      min-width:auto;
+      font-size: 12px;
+      line-height: 140%;
+      margin-bottom: 15px;
+      
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 120%;
+    }
+    &__text {
+      font-size: 11px;
+      line-height: 140%;
+    }
+    &__list li {
+      font-size: 12px;
+      line-height: 140%;
+    }
+  }
+  .benefits {
+    &__items {
+      flex-direction: column;
+      gap: 32px;
+    }
+    &__list li {
+      font-size: 12px;
+      line-height: 140%;
+      margin-bottom: 7px;
+    }
+  }
+  .info {
+    margin:0 15px 75px;
+    &__container {
+      padding: 40px 20px 20px;
+    }
+    &__items {
+      gap: 30px;
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 120%;
+    }
+    &__comment {
+      font-size: 13px;
+      line-height: 19px;
+      margin-bottom: 20px;
+    }
+    &__list-link {
+      font-size: 14px;
+      line-height: 19px;
+    }
+    &__list li {
+      font-size: 12px;
+      line-height: 140%;
+    }
+    &__subtitle {
+      font-size: 14px;
+      line-height: 19px;
+      font-weight: 600;
+    }
+  }
+}

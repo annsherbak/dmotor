@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOG - режим ручного управления</title>
+  <meta name="description" content="JOG - режим ручного управления для сервопривода.">
+
+    <?php include "header.htm"; ?>
+    <main class="main" id="category__capability">
+      <section class="breadcrumbs">
+        <div class="container">
+          <? include "php/breadcrumbs.php"; ?>
+        </div>
+      </section>
+      <section class="control-methods">
+        <div class="control-methods__container">
+          <h1 class="control-methods__title">
+            JOG - режим ручного управления
+          </h1>
+          <p class="control-methods__text">
+            Сервоприводы имеют встроенный JOG-режим&nbsp;&mdash; ручное управление, подобное управлению джойстиком. Вал двигателя вращается при удержании одной из&nbsp;кнопок на&nbsp;панели управления. Для движения по&nbsp;и&nbsp;против часовой стрелки используются разные клавиши.
+          </p>
+          <p class="control-methods__text">Режим JOG предназначен для тестовых запусков и&nbsp;проверки правильности настройки контуров обратной связи. Для тестовых запусков сервопривода от&nbsp;ПК или ПЛК сервопривод имеет специальные регистры управления по&nbsp;Modbus&nbsp;&mdash; независимые регистры для включения и&nbsp;выключения питания двигателя, а&nbsp;также для старта вращения по&nbsp;и&nbsp;против часовой стрелки.</p>
+          <p class="control-methods__text">Скорость вращения сервопривода в&nbsp;режиме JOG задается отдельным параметром.</p>
+        </div>
+      </section>
+    </main>
+
+    <?php include "footer.htm"; ?>
+  </div>
