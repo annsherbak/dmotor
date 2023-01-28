@@ -1,0 +1,4 @@
+node_modules
+app/php/connection.php
+dist/php/connection.php
+app/js/jquery-ui/jquery-touch-punch.min.js
